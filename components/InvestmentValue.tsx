@@ -342,11 +342,11 @@ export default function InvestmentValue() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-4">
             More Than{" "}
             <span className="text-gradient-cyan-purple">A Token</span>
           </h2>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">
             A protocol-backed digital asset with real utility, transparent mechanics,
             and community governance.
           </p>

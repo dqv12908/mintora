@@ -90,23 +90,23 @@ export default function Mechanism() {
       {/* Sticky container */}
       <div className="sticky top-0 h-screen flex items-center overflow-hidden">
         <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+          <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6 lg:gap-12">
             {/* Left column (text) - 45% */}
             <div className="w-full lg:w-[45%] relative">
               {/* Section heading - always visible */}
-              <div className="mb-8">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-3">
+              <div className="mb-4 sm:mb-6 lg:mb-8">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-2 sm:mb-3">
                   Architecture of{" "}
                   <span className="text-gradient-cyan-purple">Trust</span>
                 </h2>
-                <p className="text-slate-400 text-base md:text-lg">
+                <p className="text-slate-400 text-sm sm:text-base md:text-lg">
                   Three layers working in harmony to create a self-sustaining,
                   trustless minting protocol.
                 </p>
               </div>
 
               {/* Layer texts - cross-fade */}
-              <div className="relative min-h-[180px]">
+              <div className="relative min-h-[140px] sm:min-h-[180px]">
                 {layers.map((layer, i) => (
                   <motion.div
                     key={layer.num}
@@ -129,7 +129,7 @@ export default function Mechanism() {
                         </h3>
                       </div>
                     </div>
-                    <p className="text-slate-400 leading-relaxed">
+                    <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
                       {layer.description}
                     </p>
                   </motion.div>
@@ -137,7 +137,7 @@ export default function Mechanism() {
               </div>
 
               {/* Progress dots */}
-              <div className="flex gap-3 mt-8">
+              <div className="flex gap-3 mt-4 sm:mt-8">
                 {[0, 1, 2].map((i) => (
                   <div
                     key={i}
@@ -152,7 +152,7 @@ export default function Mechanism() {
             </div>
 
             {/* Right column (iPad) - 55% */}
-            <div className="w-full lg:w-[55%] flex justify-center">
+            <div className="w-full lg:w-[55%] flex justify-center overflow-hidden">
               <IPadFrame>
                 <div className="relative w-full h-full">
                   {/* Stacked demos */}

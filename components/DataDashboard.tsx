@@ -108,7 +108,7 @@ export default function DataDashboard() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-4">
             Protocol{" "}
             <span className="text-gradient-cyan-purple">Statistics</span>
           </h2>

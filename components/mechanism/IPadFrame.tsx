@@ -15,7 +15,7 @@ export default function IPadFrame({ children, className = "" }: IPadFrameProps) 
         style={{ transformStyle: "preserve-3d" }}
       >
         {/* Device body */}
-        <div className="relative ipad-frame bg-slate-900 w-[340px] h-[460px] md:w-[440px] md:h-[600px]">
+        <div className="relative ipad-frame bg-slate-900 w-[280px] h-[380px] sm:w-[340px] sm:h-[460px] md:w-[440px] md:h-[600px]">
           {/* Camera notch */}
           <div className="absolute top-3 left-1/2 -translate-x-1/2 w-3 h-3 bg-slate-700 border border-slate-600 z-10" />
 

@@ -5,6 +5,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 @layer base {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   body {
     @apply bg-bg-primary text-slate-200;
     font-family: 'Inter', system-ui, sans-serif;
@@ -89,8 +94,20 @@
   }
 
   .ipad-3d-tilt {
-    transform: rotateY(-25deg) rotateX(10deg) rotateZ(2deg);
+    transform: rotateY(-12deg) rotateX(5deg) rotateZ(1deg);
     transform-style: preserve-3d;
+  }
+
+  @media (min-width: 640px) {
+    .ipad-3d-tilt {
+      transform: rotateY(-18deg) rotateX(8deg) rotateZ(1.5deg);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .ipad-3d-tilt {
+      transform: rotateY(-25deg) rotateX(10deg) rotateZ(2deg);
+    }
   }
 
   .perspective-container {

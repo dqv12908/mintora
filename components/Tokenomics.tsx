@@ -219,11 +219,11 @@ export default function Tokenomics() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-4">
             Math-Driven{" "}
             <span className="text-gradient-cyan-purple">Scarcity</span>
           </h2>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">
             No team tokens. No private sales. Every token is minted by the community
             through the protocol.
           </p>
@@ -231,8 +231,8 @@ export default function Tokenomics() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: Pie Chart with draw-on-scroll */}
-          <div className="flex justify-center" ref={chartRef}>
-            <div className="relative w-72 h-72 md:w-80 md:h-80">
+          <div className="flex justify-center px-6 sm:px-0" ref={chartRef}>
+            <div className="relative w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80">
               {/* SVG Circle */}
               <svg viewBox="0 0 200 200" className="w-full h-full">
                 {/* Outer glow ring */}
@@ -318,15 +318,15 @@ export default function Tokenomics() {
                 className="absolute -top-2 left-1/2 -translate-x-1/2 text-center"
                 style={{ opacity: labelOpacity, scale: labelScale }}
               >
-                <span className="text-xs text-neon-green font-medium px-3 py-1 bg-neon-green/10 border border-neon-green/20">
+                <span className="text-[10px] sm:text-xs text-neon-green font-medium px-2 sm:px-3 py-1 bg-neon-green/10 border border-neon-green/20">
                   0% Team
                 </span>
               </motion.div>
               <motion.div
-                className="absolute top-1/2 -right-4 -translate-y-1/2"
+                className="absolute top-1/2 -right-2 sm:-right-4 -translate-y-1/2"
                 style={{ opacity: labelOpacity, scale: labelScale }}
               >
-                <span className="text-xs text-neon-green font-medium px-3 py-1 bg-neon-green/10 border border-neon-green/20">
+                <span className="text-[10px] sm:text-xs text-neon-green font-medium px-2 sm:px-3 py-1 bg-neon-green/10 border border-neon-green/20">
                   0% Private
                 </span>
               </motion.div>
@@ -334,7 +334,7 @@ export default function Tokenomics() {
                 className="absolute -bottom-2 left-1/2 -translate-x-1/2"
                 style={{ opacity: labelOpacity, scale: labelScale }}
               >
-                <span className="text-xs text-neon-cyan font-medium px-3 py-1 bg-neon-cyan/10 border border-neon-cyan/20">
+                <span className="text-[10px] sm:text-xs text-neon-cyan font-medium px-2 sm:px-3 py-1 bg-neon-cyan/10 border border-neon-cyan/20 whitespace-nowrap">
                   100% Community
                 </span>
               </motion.div>

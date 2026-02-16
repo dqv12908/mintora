@@ -66,21 +66,21 @@ export default function Introduction() {
         <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <motion.div
-            className="text-center mb-12"
+            className="text-center mb-8 sm:mb-12"
             style={{ opacity: headingOpacity, y: headingY }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-3 sm:mb-4">
               Why{" "}
               <span className="text-gradient-cyan-purple">Mintoria</span>?
             </h2>
-            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+            <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">
               The shift from trust-based token issuance to protocol-driven minting.
             </p>
           </motion.div>
 
           {/* Card flip area */}
           <div className="perspective-container max-w-2xl mx-auto">
-            <div className="relative" style={{ minHeight: "320px" }}>
+            <div className="relative min-h-[280px] sm:min-h-[320px]">
               {/* Old Way Card */}
               <motion.div
                 className="absolute inset-0 p-6 md:p-8 bg-bg-surface border border-white/5"

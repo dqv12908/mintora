@@ -17,7 +17,7 @@ function HeroIllustration() {
     >
       {/* Ambient glow */}
       <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-52 h-52 md:w-72 md:h-72 rounded-full pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-36 h-36 sm:w-52 sm:h-52 md:w-72 md:h-72 rounded-full pointer-events-none"
         style={{
           background:
             "radial-gradient(circle, rgba(0,240,255,0.10) 0%, rgba(168,85,247,0.04) 45%, transparent 70%)",
@@ -33,7 +33,7 @@ function HeroIllustration() {
       >
         {/* ---- Orbit A — largest, cyan ---- */}
         <motion.div
-          className="absolute w-72 h-72 md:w-[22rem] md:h-[22rem] lg:w-[26rem] lg:h-[26rem]"
+          className="absolute w-48 h-48 sm:w-72 sm:h-72 md:w-[22rem] md:h-[22rem] lg:w-[26rem] lg:h-[26rem]"
           style={{ rotateX: 72, transformStyle: "preserve-3d" }}
           animate={{ rotateZ: 360 }}
           transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
@@ -57,7 +57,7 @@ function HeroIllustration() {
 
         {/* ---- Orbit B — medium, purple ---- */}
         <motion.div
-          className="absolute w-60 h-60 md:w-72 md:h-72 lg:w-[21rem] lg:h-[21rem]"
+          className="absolute w-40 h-40 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-[21rem] lg:h-[21rem]"
           style={{ rotateX: 72, rotateY: 55, transformStyle: "preserve-3d" }}
           animate={{ rotateZ: -360 }}
           transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
@@ -80,7 +80,7 @@ function HeroIllustration() {
 
         {/* ---- Orbit C — smallest, green ---- */}
         <motion.div
-          className="absolute w-44 h-44 md:w-52 md:h-52 lg:w-64 lg:h-64"
+          className="absolute w-28 h-28 sm:w-44 sm:h-44 md:w-52 md:h-52 lg:w-64 lg:h-64"
           style={{ rotateX: 72, rotateY: -55, transformStyle: "preserve-3d" }}
           animate={{ rotateZ: 360 }}
           transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
@@ -102,7 +102,7 @@ function HeroIllustration() {
 
         {/* ---- Central Core — rotating hexagonal wireframe ---- */}
         <motion.div
-          className="absolute w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32"
+          className="absolute w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32"
           style={{ rotateX: 20, transformStyle: "preserve-3d" }}
           animate={{ rotateY: 360 }}
           transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
@@ -227,13 +227,13 @@ export default function HeroSection() {
 
       {/* Layer 2: Left orb */}
       <motion.div
-        className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-cyan/5 blur-3xl will-change-transform"
+        className="absolute top-1/4 left-[10%] w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 bg-neon-cyan/5 blur-3xl will-change-transform"
         style={{ y: leftOrbY }}
       />
 
       {/* Layer 3: Right orb */}
       <motion.div
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-purple/5 blur-3xl will-change-transform"
+        className="absolute bottom-1/4 right-[10%] w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 bg-neon-purple/5 blur-3xl will-change-transform"
         style={{ y: rightOrbY }}
       />
 
@@ -257,7 +257,7 @@ export default function HeroSection() {
             </motion.div>
 
             {/* Headline — Character-by-character reveal */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-heading font-bold uppercase leading-tight mb-2">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-heading font-bold uppercase leading-tight mb-2">
               <span className="inline-block">
                 {titleChars.map((char, i) => (
                   <motion.span
@@ -278,8 +278,8 @@ export default function HeroSection() {
               </span>
             </h1>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-heading font-bold uppercase leading-tight mb-5">
-              <span className="inline-block">
+            <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-heading font-bold uppercase leading-tight mb-5">
+              <span className="inline">
                 {subtitleChars.map((char, i) => (
                   <motion.span
                     key={`sub-${i}`}
@@ -296,7 +296,7 @@ export default function HeroSection() {
                       ...(char === " " ? { width: "0.3em" } : {}),
                     }}
                   >
-                    {char === " " ? "\u00A0" : char}
+                    {char === " " ? " " : char}
                   </motion.span>
                 ))}
               </span>
@@ -367,7 +367,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right: 3D Illustration */}
-          <div className="order-2 flex items-center justify-center">
+          <div className="order-2 flex items-center justify-center overflow-hidden">
             <HeroIllustration />
           </div>
         </div>
