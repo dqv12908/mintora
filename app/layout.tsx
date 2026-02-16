@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   description:
     "Protocol-driven issuance. 100% community minted. Math-driven scarcity with on-chain settlement.",
   keywords: ["Mintoria", "DeFi", "minting", "protocol", "crypto", "blockchain"],
+  icons: {
+    icon: "/icon.ico",
+  },
 };
 
 export default function RootLayout({
