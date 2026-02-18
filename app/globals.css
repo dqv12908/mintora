@@ -184,3 +184,31 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ─── Google Translate – suppress default UI ─── */
+.goog-te-banner-frame,
+.goog-te-balloon-frame,
+#goog-gt-tt,
+.goog-tooltip,
+.goog-te-gadget {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+/* Language dropdown thin scrollbar */
+.lang-scroll::-webkit-scrollbar {
+  width: 3px;
+}
+.lang-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.lang-scroll::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.15);
+  border-radius: 2px;
+}
+.lang-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.35);
+}
