@@ -2,23 +2,11 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-
-const oldWay = [
-  "Pre-mined tokens controlled by insiders",
-  "Opaque allocation & vesting schedules",
-  "Inflationary supply with no real backing",
-  "Trust-based promises from anonymous teams",
-];
-
-const mintoriaWay = [
-  "100% community minted — zero pre-allocation",
-  "Transparent on-chain issuance rules",
-  "Math-driven scarcity with reserve backing",
-  "Trustless protocol — code is the guarantee",
-];
+import { useLanguage } from "@/providers/LanguageProvider";
 
 export default function Introduction() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -34,7 +22,6 @@ export default function Introduction() {
   const oldWayX = useTransform(scrollYProgress, [0.15, 0.3], [-40, 0]);
   const oldWayRotateY = useTransform(scrollYProgress, [0.5, 0.65], [0, 90]);
 
-  // Old way items staggered opacity
   const oldItem0Opacity = useTransform(scrollYProgress, [0.2, 0.24], [0, 1]);
   const oldItem1Opacity = useTransform(scrollYProgress, [0.24, 0.28], [0, 1]);
   const oldItem2Opacity = useTransform(scrollYProgress, [0.28, 0.32], [0, 1]);
@@ -45,7 +32,6 @@ export default function Introduction() {
   const mintoriaRotateY = useTransform(scrollYProgress, [0.55, 0.7], [-90, 0]);
   const mintoriaFlipOpacity = useTransform(scrollYProgress, [0.6, 0.7], [0, 1]);
 
-  // Mintoria items staggered opacity
   const newItem0Opacity = useTransform(scrollYProgress, [0.68, 0.72], [0, 1]);
   const newItem1Opacity = useTransform(scrollYProgress, [0.72, 0.76], [0, 1]);
   const newItem2Opacity = useTransform(scrollYProgress, [0.76, 0.80], [0, 1]);
@@ -70,11 +56,21 @@ export default function Introduction() {
             style={{ opacity: headingOpacity, y: headingY }}
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-3 sm:mb-4">
-              Why{" "}
-              <span className="text-gradient-cyan-purple">Mintoria</span>?
+              {(() => {
+                const title = t.philosophy.title;
+                const idx = title.indexOf("Mintoria");
+                if (idx === -1) return title;
+                return (
+                  <>
+                    {title.slice(0, idx)}
+                    <span className="text-gradient-cyan-purple">Mintoria</span>
+                    {title.slice(idx + 8)}
+                  </>
+                );
+              })()}
             </h2>
             <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">
-              The shift from trust-based token issuance to protocol-driven minting.
+              {t.philosophy.subtitle}
             </p>
           </motion.div>
 
@@ -99,13 +95,13 @@ export default function Introduction() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-heading font-semibold text-slate-300">
-                    The Old Way
+                    {t.philosophy.oldWayTitle}
                   </h3>
                 </div>
                 <ul className="space-y-4">
-                  {oldWay.map((item, i) => (
+                  {t.philosophy.oldWay.map((item, i) => (
                     <motion.li
-                      key={item}
+                      key={i}
                       className="flex items-start gap-3"
                       style={{ opacity: oldItemOpacities[i] }}
                     >
@@ -141,13 +137,13 @@ export default function Introduction() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-heading font-semibold text-white">
-                    The Mintoria Way
+                    {t.philosophy.mintoriaWayTitle}
                   </h3>
                 </div>
                 <ul className="relative space-y-4">
-                  {mintoriaWay.map((item, i) => (
+                  {t.philosophy.mintoriaWay.map((item, i) => (
                     <motion.li
-                      key={item}
+                      key={i}
                       className="flex items-start gap-3"
                       style={{ opacity: newItemOpacities[i] }}
                     >

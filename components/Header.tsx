@@ -3,16 +3,10 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { Logomark } from "@/components/logos/MintoriaLogo";
+import { useLanguage } from "@/providers/LanguageProvider";
+import type { LangCode } from "@/lib/translations";
 
-const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Philosophy", href: "#philosophy" },
-  { label: "Mechanisms", href: "#mechanisms" },
-  { label: "Tokenomics", href: "#tokenomics" },
-  { label: "Dashboard", href: "#dashboard" },
-];
-
-const languages = [
+const languages: { name: string; code: LangCode; short: string }[] = [
   { name: "English",   code: "en",    short: "EN" },
   { name: "Deutsch",   code: "de",    short: "DE" },
   { name: "español",   code: "es",    short: "ES" },
@@ -29,22 +23,12 @@ const languages = [
   { name: "Русский",   code: "ru",    short: "RU" },
 ];
 
-type Language = (typeof languages)[number];
-
 function LanguageSelector({ onSelect }: { onSelect?: () => void }) {
   const [open, setOpen] = useState(false);
-  const [current, setCurrent] = useState<Language>(languages[0]);
   const containerRef = useRef<HTMLDivElement>(null);
+  const { lang, setLang } = useLanguage();
 
-  // Restore displayed language from googtrans cookie on mount
-  useEffect(() => {
-    const match = document.cookie.match(/googtrans=\/en\/([^;]+)/);
-    if (match) {
-      const code = decodeURIComponent(match[1]);
-      const found = languages.find((l) => l.code === code);
-      if (found) setCurrent(found);
-    }
-  }, []);
+  const current = languages.find((l) => l.code === lang) ?? languages[0];
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -57,34 +41,10 @@ function LanguageSelector({ onSelect }: { onSelect?: () => void }) {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
-  const triggerGoogleTranslate = (code: string) => {
-    const select = document.querySelector<HTMLSelectElement>(".goog-te-combo");
-    if (select) {
-      select.value = code;
-      // bubbles:true is required — GT listens at document level
-      select.dispatchEvent(new Event("change", { bubbles: true }));
-      return true;
-    }
-    return false;
-  };
-
-  const changeLanguage = (lang: Language) => {
-    setCurrent(lang);
+  const changeLanguage = (code: LangCode) => {
+    setLang(code);
     setOpen(false);
     onSelect?.();
-
-    if (lang.code === "en") {
-      // Reload to fully restore original English content
-      document.cookie = "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT";
-      document.cookie = `googtrans=; domain=.${window.location.hostname}; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT`;
-      window.location.reload();
-      return;
-    }
-
-    // Try immediately; if GT widget isn't initialised yet, retry after 500 ms
-    if (!triggerGoogleTranslate(lang.code)) {
-      setTimeout(() => triggerGoogleTranslate(lang.code), 500);
-    }
   };
 
   return (
@@ -137,18 +97,18 @@ function LanguageSelector({ onSelect }: { onSelect?: () => void }) {
             className="absolute right-0 top-full mt-2 w-44 bg-bg-primary/98 backdrop-blur-lg border border-white/10 shadow-2xl z-[60]"
           >
             <div className="max-h-64 overflow-y-auto lang-scroll py-1">
-              {languages.map((lang) => (
+              {languages.map((language) => (
                 <button
-                  key={lang.code}
-                  onClick={() => changeLanguage(lang)}
+                  key={language.code}
+                  onClick={() => changeLanguage(language.code)}
                   className={`w-full text-left px-4 py-2.5 text-sm transition-colors duration-100 flex items-center justify-between ${
-                    current.code === lang.code
+                    current.code === language.code
                       ? "text-neon-cyan bg-neon-cyan/5"
                       : "text-slate-400 hover:text-white hover:bg-white/5"
                   }`}
                 >
-                  <span>{lang.name}</span>
-                  {current.code === lang.code && (
+                  <span>{language.name}</span>
+                  {current.code === language.code && (
                     <svg
                       className="w-3.5 h-3.5 text-neon-cyan shrink-0"
                       fill="none"
@@ -172,6 +132,7 @@ function LanguageSelector({ onSelect }: { onSelect?: () => void }) {
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { t } = useLanguage();
 
   const { scrollYProgress } = useScroll();
   const progressWidth = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
@@ -181,6 +142,14 @@ export default function Header() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const navLinks = [
+    { label: t.nav.home, href: "#home" },
+    { label: t.nav.philosophy, href: "#philosophy" },
+    { label: t.nav.mechanisms, href: "#mechanisms" },
+    { label: t.nav.tokenomics, href: "#tokenomics" },
+    { label: t.nav.dashboard, href: "#dashboard" },
+  ];
 
   return (
     <header
@@ -232,7 +201,7 @@ export default function Header() {
               href="#"
               className="hidden md:inline-flex items-center px-5 py-2 text-sm font-medium text-neon-cyan border border-neon-cyan/50 hover:bg-neon-cyan/10 hover:glow-cyan transition-all duration-300"
             >
-              Launch App
+              {t.nav.launchApp}
             </a>
 
             {/* Hamburger */}
@@ -291,7 +260,7 @@ export default function Header() {
                 href="#"
                 className="inline-flex items-center justify-center px-5 py-2 text-sm font-medium text-neon-cyan border border-neon-cyan/50 hover:bg-neon-cyan/10 transition-all"
               >
-                Launch App
+                {t.nav.launchApp}
               </a>
             </nav>
           </motion.div>

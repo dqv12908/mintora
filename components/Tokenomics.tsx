@@ -2,6 +2,7 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, useInView, type MotionValue } from "framer-motion";
+import { useLanguage } from "@/providers/LanguageProvider";
 
 /* ---------- SVG Illustrations ---------- */
 
@@ -18,24 +19,17 @@ function NativeMintingIllustration() {
           <stop offset="100%" stopColor="#00c4cc" />
         </linearGradient>
       </defs>
-
-      {/* ETH diamond */}
       <g transform="translate(30, 30)">
         <polygon points="28,0 50,28 28,38 6,28" fill="url(#nm-eth)" opacity="0.8" />
         <polygon points="28,42 50,32 28,56 6,32" fill="url(#nm-eth)" opacity="0.5" />
         <line x1="28" y1="0" x2="28" y2="56" stroke="#0a0a0f" strokeWidth="0.5" opacity="0.3" />
         <text x="28" y="76" fill="#a855f7" fontSize="10" textAnchor="middle" fontFamily="monospace" fontWeight="bold">ETH</text>
       </g>
-
-      {/* Arrow: ETH -> Contract */}
       <line x1="88" y1="58" x2="118" y2="58" stroke="#00f0ff" strokeWidth="1.5" strokeDasharray="5 3" opacity="0.6" />
       <polyline points="114,53 122,58 114,63" fill="none" stroke="#00f0ff" strokeWidth="1.5" opacity="0.6" />
-
-      {/* Contract box */}
       <g transform="translate(125, 30)">
         <rect x="0" y="0" width="70" height="56" rx="6" fill="#0a0a0f" stroke="#00f0ff" strokeWidth="1.5" opacity="0.8" />
         <rect x="0" y="0" width="70" height="56" rx="6" fill="#00f0ff" opacity="0.05" />
-        {/* Gear icon */}
         <circle cx="35" cy="22" r="8" fill="none" stroke="#00f0ff" strokeWidth="1.2" opacity="0.6" />
         <circle cx="35" cy="22" r="3" fill="#00f0ff" opacity="0.3" />
         <line x1="35" y1="12" x2="35" y2="14" stroke="#00f0ff" strokeWidth="1.5" opacity="0.5" />
@@ -44,12 +38,8 @@ function NativeMintingIllustration() {
         <line x1="43" y1="22" x2="45" y2="22" stroke="#00f0ff" strokeWidth="1.5" opacity="0.5" />
         <text x="35" y="46" fill="#00f0ff" fontSize="9" textAnchor="middle" fontFamily="monospace" fontWeight="bold">MINT</text>
       </g>
-
-      {/* Arrow: Contract -> MTR tokens (top-right) */}
       <line x1="198" y1="42" x2="225" y2="30" stroke="#00f0ff" strokeWidth="1.5" strokeDasharray="5 3" opacity="0.6" />
       <polyline points="220,25 228,28 222,34" fill="none" stroke="#00f0ff" strokeWidth="1.5" opacity="0.6" />
-
-      {/* MTR token circles */}
       <circle cx="240" cy="22" r="12" fill="url(#nm-coin)" opacity="0.9" />
       <text x="240" y="26" fill="#0a0a0f" fontSize="7" fontWeight="bold" textAnchor="middle" fontFamily="monospace">M</text>
       <circle cx="260" cy="18" r="10" fill="url(#nm-coin)" opacity="0.7" />
@@ -57,16 +47,11 @@ function NativeMintingIllustration() {
       <circle cx="278" cy="24" r="8" fill="url(#nm-coin)" opacity="0.5" />
       <text x="278" y="27" fill="#0a0a0f" fontSize="5" fontWeight="bold" textAnchor="middle" fontFamily="monospace">M</text>
       <text x="258" y="46" fill="#00f0ff" fontSize="9" textAnchor="middle" fontFamily="monospace" opacity="0.7">MTR</text>
-
-      {/* Arrow: Contract -> Reserve (bottom-right) */}
       <line x1="198" y1="72" x2="225" y2="85" stroke="#00f0ff" strokeWidth="1.5" strokeDasharray="5 3" opacity="0.6" />
       <polyline points="222,80 228,87 220,89" fill="none" stroke="#00f0ff" strokeWidth="1.5" opacity="0.6" />
-
-      {/* Reserve container */}
       <g transform="translate(230, 62)">
         <rect x="0" y="0" width="65" height="45" rx="6" fill="#0a0a0f" stroke="#00ff88" strokeWidth="1.2" opacity="0.6" />
         <rect x="0" y="0" width="65" height="45" rx="6" fill="#00ff88" opacity="0.04" />
-        {/* Level indicator */}
         <rect x="6" y="18" width="53" height="21" rx="2" fill="#00ff88" opacity="0.08" />
         <rect x="6" y="26" width="53" height="13" rx="2" fill="#00ff88" opacity="0.15" />
         <text x="33" y="10" fill="#00ff88" fontSize="7" textAnchor="middle" fontFamily="monospace" opacity="0.8">RESERVE</text>
@@ -89,8 +74,6 @@ function ProtocolBurnIllustration() {
           <stop offset="100%" stopColor="#00c4cc" />
         </linearGradient>
       </defs>
-
-      {/* Top row: 5 MTR tokens flowing in */}
       <circle cx="50" cy="20" r="12" fill="url(#pb-coin)" opacity="0.8" />
       <text x="50" y="24" fill="#0a0a0f" fontSize="7" fontWeight="bold" textAnchor="middle" fontFamily="monospace">M</text>
       <circle cx="82" cy="20" r="12" fill="url(#pb-coin)" opacity="0.7" />
@@ -101,68 +84,29 @@ function ProtocolBurnIllustration() {
       <text x="146" y="24" fill="#0a0a0f" fontSize="7" fontWeight="bold" textAnchor="middle" fontFamily="monospace">M</text>
       <circle cx="178" cy="20" r="12" fill="url(#pb-coin)" opacity="0.4" />
       <text x="178" y="24" fill="#0a0a0f" fontSize="7" fontWeight="bold" textAnchor="middle" fontFamily="monospace">M</text>
-
-      {/* Down arrows into flame */}
       <line x1="82" y1="35" x2="114" y2="50" stroke="#94a3b8" strokeWidth="1" strokeDasharray="3 2" opacity="0.4" />
       <line x1="114" y1="35" x2="114" y2="50" stroke="#94a3b8" strokeWidth="1" strokeDasharray="3 2" opacity="0.4" />
       <line x1="146" y1="35" x2="114" y2="50" stroke="#94a3b8" strokeWidth="1" strokeDasharray="3 2" opacity="0.4" />
-
-      {/* Flame / funnel shape */}
-      <path
-        d="M90,90 C90,70 100,55 114,50 C128,55 138,70 138,90 C138,95 132,100 114,100 C96,100 90,95 90,90Z"
-        fill="url(#pb-flame)"
-        opacity="0.7"
-      />
-      {/* Inner flame */}
-      <path
-        d="M102,90 C102,77 108,67 114,63 C120,67 126,77 126,90 C126,93 122,95 114,95 C106,95 102,93 102,90Z"
-        fill="#ffaa00"
-        opacity="0.5"
-      />
-      {/* Flame highlight */}
-      <path
-        d="M110,87 C110,80 112,73 114,70 C116,73 118,80 118,87 C118,89 116,90 114,90 C112,90 110,89 110,87Z"
-        fill="#ffffff"
-        opacity="0.3"
-      />
-
-      {/* BURN label */}
+      <path d="M90,90 C90,70 100,55 114,50 C128,55 138,70 138,90 C138,95 132,100 114,100 C96,100 90,95 90,90Z" fill="url(#pb-flame)" opacity="0.7" />
+      <path d="M102,90 C102,77 108,67 114,63 C120,67 126,77 126,90 C126,93 122,95 114,95 C106,95 102,93 102,90Z" fill="#ffaa00" opacity="0.5" />
+      <path d="M110,87 C110,80 112,73 114,70 C116,73 118,80 118,87 C118,89 116,90 114,90 C112,90 110,89 110,87Z" fill="#ffffff" opacity="0.3" />
       <text x="114" y="115" fill="#ff4466" fontSize="9" textAnchor="middle" fontFamily="monospace" fontWeight="bold">BURN</text>
-
-      {/* Bottom row: only 2 remaining tokens */}
       <circle cx="90" cy="135" r="8" fill="url(#pb-coin)" opacity="0.6" />
       <text x="90" y="138" fill="#0a0a0f" fontSize="5" fontWeight="bold" textAnchor="middle" fontFamily="monospace">M</text>
       <circle cx="138" cy="135" r="8" fill="url(#pb-coin)" opacity="0.4" />
       <text x="138" y="138" fill="#0a0a0f" fontSize="5" fontWeight="bold" textAnchor="middle" fontFamily="monospace">M</text>
-
-      {/* Right side: declining supply graph */}
       <g transform="translate(195, 25)">
-        {/* Graph bg */}
         <rect x="0" y="0" width="90" height="75" rx="4" fill="#ffffff" opacity="0.02" />
         <rect x="0" y="0" width="90" height="75" rx="4" fill="none" stroke="#ffffff" strokeWidth="0.5" opacity="0.1" />
-
-        {/* Grid lines */}
         <line x1="10" y1="18" x2="80" y2="18" stroke="#ffffff" strokeWidth="0.3" opacity="0.1" />
         <line x1="10" y1="37" x2="80" y2="37" stroke="#ffffff" strokeWidth="0.3" opacity="0.1" />
         <line x1="10" y1="56" x2="80" y2="56" stroke="#ffffff" strokeWidth="0.3" opacity="0.1" />
-
-        {/* Declining line */}
-        <polyline
-          points="12,15 28,22 44,35 60,50 76,60"
-          fill="none"
-          stroke="#00ff88"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        {/* Data dots */}
+        <polyline points="12,15 28,22 44,35 60,50 76,60" fill="none" stroke="#00ff88" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         <circle cx="12" cy="15" r="2.5" fill="#00ff88" />
         <circle cx="28" cy="22" r="2.5" fill="#00ff88" />
         <circle cx="44" cy="35" r="2.5" fill="#00ff88" />
         <circle cx="60" cy="50" r="2.5" fill="#00ff88" />
         <circle cx="76" cy="60" r="2.5" fill="#00ff88" />
-
-        {/* Down arrow indicator */}
         <polyline points="68,18 74,26 80,18" fill="none" stroke="#00ff88" strokeWidth="1.5" opacity="0.6" />
       </g>
       <text x="240" y="115" fill="#00ff88" fontSize="8" textAnchor="middle" fontFamily="monospace" opacity="0.6">DEFLATION</text>
@@ -194,17 +138,16 @@ function PercentDisplay({ value }: { value: MotionValue<number> }) {
 export default function Tokenomics() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const chartRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
   });
 
-  // SVG circle draw synced to scroll
   const strokeDashoffset = useTransform(scrollYProgress, [0.1, 0.5], [502.65, 0]);
   const percentValue = useTransform(scrollYProgress, [0.1, 0.5], [0, 100]);
 
-  // Label badges pop in
   const labelOpacity = useTransform(scrollYProgress, [0.45, 0.55], [0, 1]);
   const labelScale = useTransform(scrollYProgress, [0.45, 0.55], [0.8, 1]);
 
@@ -220,35 +163,31 @@ export default function Tokenomics() {
           className="text-center mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-4">
-            Math-Driven{" "}
-            <span className="text-gradient-cyan-purple">Scarcity</span>
+            {(() => {
+              const title = t.tokenomics.title;
+              const words = title.split(" ");
+              const last = words.pop();
+              return (
+                <>
+                  {words.join(" ")}{" "}
+                  <span className="text-gradient-cyan-purple">{last}</span>
+                </>
+              );
+            })()}
           </h2>
           <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">
-            No team tokens. No private sales. Every token is minted by the community
-            through the protocol.
+            {t.tokenomics.subtitle}
           </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left: Pie Chart with draw-on-scroll */}
+          {/* Left: Pie Chart */}
           <div className="flex justify-center px-6 sm:px-0" ref={chartRef}>
             <div className="relative w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80">
-              {/* SVG Circle */}
               <svg viewBox="0 0 200 200" className="w-full h-full">
-                {/* Outer glow ring */}
-                <circle
-                  cx="100"
-                  cy="100"
-                  r="90"
-                  fill="none"
-                  stroke="rgba(0, 240, 255, 0.1)"
-                  strokeWidth="2"
-                />
-                {/* Main circle — draw on scroll */}
+                <circle cx="100" cy="100" r="90" fill="none" stroke="rgba(0, 240, 255, 0.1)" strokeWidth="2" />
                 <motion.circle
-                  cx="100"
-                  cy="100"
-                  r="80"
+                  cx="100" cy="100" r="80"
                   fill="none"
                   stroke="url(#tokenGradient)"
                   strokeWidth="12"
@@ -257,36 +196,18 @@ export default function Tokenomics() {
                   style={{ strokeDashoffset }}
                   transform="rotate(-90 100 100)"
                 />
-                {/* Inner ring */}
-                <circle
-                  cx="100"
-                  cy="100"
-                  r="65"
-                  fill="none"
-                  stroke="rgba(0, 240, 255, 0.05)"
-                  strokeWidth="1"
-                />
-                {/* Gradient definition */}
+                <circle cx="100" cy="100" r="65" fill="none" stroke="rgba(0, 240, 255, 0.05)" strokeWidth="1" />
                 <defs>
                   <linearGradient id="tokenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stopColor="#00f0ff" />
                     <stop offset="100%" stopColor="#a855f7" />
                   </linearGradient>
                 </defs>
-                {/* Center text — percent counts up */}
-                <text
-                  x="100"
-                  y="92"
-                  textAnchor="middle"
-                  fill="#00f0ff"
-                  fontSize="28"
-                  fontWeight="bold"
-                  fontFamily="Space Grotesk, sans-serif"
-                >
+                <text x="100" y="92" textAnchor="middle" fill="#00f0ff" fontSize="28" fontWeight="bold" fontFamily="Space Grotesk, sans-serif">
                   <PercentDisplay value={percentValue} />
                 </text>
                 <text x="100" y="115" textAnchor="middle" fill="#94a3b8" fontSize="12" fontFamily="Inter, sans-serif">
-                  Community Mint
+                  {t.tokenomics.communityMint}
                 </text>
               </svg>
 
@@ -313,13 +234,13 @@ export default function Tokenomics() {
                 </div>
               ))}
 
-              {/* Labels — pop in */}
+              {/* Labels */}
               <motion.div
                 className="absolute -top-2 left-1/2 -translate-x-1/2 text-center"
                 style={{ opacity: labelOpacity, scale: labelScale }}
               >
                 <span className="text-[10px] sm:text-xs text-neon-green font-medium px-2 sm:px-3 py-1 bg-neon-green/10 border border-neon-green/20">
-                  0% Team
+                  {t.tokenomics.teamPercent}
                 </span>
               </motion.div>
               <motion.div
@@ -327,7 +248,7 @@ export default function Tokenomics() {
                 style={{ opacity: labelOpacity, scale: labelScale }}
               >
                 <span className="text-[10px] sm:text-xs text-neon-green font-medium px-2 sm:px-3 py-1 bg-neon-green/10 border border-neon-green/20">
-                  0% Private
+                  {t.tokenomics.privatePercent}
                 </span>
               </motion.div>
               <motion.div
@@ -335,7 +256,7 @@ export default function Tokenomics() {
                 style={{ opacity: labelOpacity, scale: labelScale }}
               >
                 <span className="text-[10px] sm:text-xs text-neon-cyan font-medium px-2 sm:px-3 py-1 bg-neon-cyan/10 border border-neon-cyan/20 whitespace-nowrap">
-                  100% Community
+                  {t.tokenomics.communityPercent}
                 </span>
               </motion.div>
             </div>
@@ -355,21 +276,15 @@ export default function Tokenomics() {
                 <NativeMintingIllustration />
               </div>
               <h3 className="text-lg font-heading font-semibold text-white mb-3">
-                Native Minting
+                {t.tokenomics.nativeMintingTitle}
               </h3>
               <ul className="space-y-2 text-slate-400 text-sm">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-neon-cyan shrink-0" />
-                  Dynamic cost calculated per mint event
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-neon-cyan shrink-0" />
-                  Reserve allocation on every transaction
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-neon-cyan shrink-0" />
-                  Automatic burn split mechanism
-                </li>
+                {t.tokenomics.nativeMintingItems.map((item, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-neon-cyan shrink-0" />
+                    {item}
+                  </li>
+                ))}
               </ul>
             </motion.div>
 
@@ -385,21 +300,15 @@ export default function Tokenomics() {
                 <ProtocolBurnIllustration />
               </div>
               <h3 className="text-lg font-heading font-semibold text-white mb-3">
-                Protocol Burn
+                {t.tokenomics.protocolBurnTitle}
               </h3>
               <ul className="space-y-2 text-slate-400 text-sm">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-neon-purple shrink-0" />
-                  Burn-on-mint deflationary pressure
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-neon-purple shrink-0" />
-                  Inflation feedback loop mechanism
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-neon-purple shrink-0" />
-                  Permanent black hole address
-                </li>
+                {t.tokenomics.protocolBurnItems.map((item, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-neon-purple shrink-0" />
+                    {item}
+                  </li>
+                ))}
               </ul>
             </motion.div>
           </div>

@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import FloatingParticles from "./effects/FloatingParticles";
+import { useLanguage } from "@/providers/LanguageProvider";
 
 /* ---------- Hero 3D Illustration ---------- */
 
@@ -45,7 +46,6 @@ function HeroIllustration() {
               stroke="#00f0ff" strokeWidth="1.5"
               strokeDasharray="28 92" strokeLinecap="round" opacity="0.35"
             />
-            {/* Nodes */}
             <circle cx="390" cy="200" r="4.5" fill="#00f0ff" opacity="0.75">
               <animate attributeName="opacity" values="0.75;0.25;0.75" dur="2s" repeatCount="indefinite" />
             </circle>
@@ -69,7 +69,6 @@ function HeroIllustration() {
               stroke="#a855f7" strokeWidth="1.5"
               strokeDasharray="20 78" strokeLinecap="round" opacity="0.28"
             />
-            {/* Nodes */}
             <circle cx="330" cy="170" r="4" fill="#a855f7" opacity="0.65">
               <animate attributeName="opacity" values="0.65;0.2;0.65" dur="2.6s" repeatCount="indefinite" />
             </circle>
@@ -92,7 +91,6 @@ function HeroIllustration() {
               stroke="#00ff88" strokeWidth="1.2"
               strokeDasharray="14 62" strokeLinecap="round" opacity="0.22"
             />
-            {/* Node */}
             <circle cx="250" cy="130" r="3.5" fill="#00ff88" opacity="0.55">
               <animate attributeName="opacity" values="0.55;0.15;0.55" dur="1.8s" repeatCount="indefinite" />
             </circle>
@@ -114,33 +112,28 @@ function HeroIllustration() {
                 <stop offset="100%" stopColor="#a855f7" />
               </linearGradient>
             </defs>
-            {/* Outer hex */}
             <polygon
               points="70,8 122,34 122,106 70,132 18,106 18,34"
               stroke="url(#hero3d-hg)" strokeWidth="1.5" strokeLinejoin="round"
               fill="none" opacity="0.35"
             />
-            {/* Inner hex */}
             <polygon
               points="70,25 107,47 107,93 70,115 33,93 33,47"
               stroke="url(#hero3d-hg)" strokeWidth="0.8" strokeLinejoin="round"
               fill="none" opacity="0.18"
             />
-            {/* Cross-struts for depth */}
             <line x1="70" y1="8" x2="70" y2="25" stroke="#00f0ff" strokeWidth="0.5" opacity="0.2" />
             <line x1="122" y1="34" x2="107" y2="47" stroke="#a855f7" strokeWidth="0.5" opacity="0.2" />
             <line x1="122" y1="106" x2="107" y2="93" stroke="#00f0ff" strokeWidth="0.5" opacity="0.2" />
             <line x1="70" y1="132" x2="70" y2="115" stroke="#a855f7" strokeWidth="0.5" opacity="0.2" />
             <line x1="18" y1="106" x2="33" y2="93" stroke="#00f0ff" strokeWidth="0.5" opacity="0.2" />
             <line x1="18" y1="34" x2="33" y2="47" stroke="#a855f7" strokeWidth="0.5" opacity="0.2" />
-            {/* Vertex dots */}
             <circle cx="70" cy="8" r="2" fill="#00f0ff" opacity="0.5" />
             <circle cx="122" cy="34" r="2" fill="#a855f7" opacity="0.45" />
             <circle cx="122" cy="106" r="2" fill="#00f0ff" opacity="0.5" />
             <circle cx="70" cy="132" r="2" fill="#a855f7" opacity="0.45" />
             <circle cx="18" cy="106" r="2" fill="#00f0ff" opacity="0.5" />
             <circle cx="18" cy="34" r="2" fill="#a855f7" opacity="0.45" />
-            {/* Core glow */}
             <circle cx="70" cy="70" r="8" fill="#00f0ff" opacity="0.12">
               <animate attributeName="r" values="8;13;8" dur="3s" repeatCount="indefinite" />
               <animate attributeName="opacity" values="0.12;0.04;0.12" dur="3s" repeatCount="indefinite" />
@@ -153,48 +146,37 @@ function HeroIllustration() {
   );
 }
 
-const badges = [
-  {
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-      </svg>
-    ),
-    text: "Code is Law",
-    from: { x: -40, y: 0 },
-  },
-  {
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
-    text: "Self-Generated",
-    from: { x: 0, y: 40 },
-  },
-  {
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
-    text: "Verifiable",
-    from: { x: 40, y: 0 },
-  },
+const badgeIcons = [
+  <svg key="code" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+  </svg>,
+  <svg key="self" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+  </svg>,
+  <svg key="verify" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+  </svg>,
+];
+
+const badgeFromDirs = [
+  { x: -40, y: 0 },
+  { x: 0, y: 40 },
+  { x: 40, y: 0 },
 ];
 
 const titleChars = "Mintoria".split("");
-const subtitleChars = "The Native Minting Protocol".split("");
 
 export default function HeroSection() {
   const heroRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
+
+  const subtitleChars = t.hero.subtitle.split("");
 
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"],
   });
 
-  // Parallax layers
   const gridY = useTransform(scrollYProgress, [0, 1], [0, 150]);
   const gradientY = useTransform(scrollYProgress, [0, 1], [0, 100]);
   const gradientScale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
@@ -204,13 +186,19 @@ export default function HeroSection() {
   const contentOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
   const scrollIndicatorOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
 
+  const badges = [
+    { icon: badgeIcons[0], text: t.hero.badge1, from: badgeFromDirs[0] },
+    { icon: badgeIcons[1], text: t.hero.badge2, from: badgeFromDirs[1] },
+    { icon: badgeIcons[2], text: t.hero.badge3, from: badgeFromDirs[2] },
+  ];
+
   return (
     <section
       id="home"
       ref={heroRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Layer 0: Grid background (slowest parallax) */}
+      {/* Layer 0: Grid background */}
       <motion.div
         className="absolute inset-0 grid-bg will-change-transform"
         style={{ y: gridY }}
@@ -237,7 +225,7 @@ export default function HeroSection() {
         style={{ y: rightOrbY }}
       />
 
-      {/* Layer 4: Content — side-by-side on lg, stacked on mobile */}
+      {/* Layer 4: Content */}
       <motion.div
         className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 w-full will-change-transform"
         style={{ y: contentY, opacity: contentOpacity }}
@@ -253,7 +241,7 @@ export default function HeroSection() {
               className="inline-flex items-center gap-2 px-4 py-1.5 border border-neon-cyan/20 bg-neon-cyan/5 text-neon-cyan text-sm mb-6"
             >
               <span className="w-2 h-2 bg-neon-cyan animate-pulse" />
-              Native Minting Protocol
+              {t.hero.tag}
             </motion.div>
 
             {/* Headline — Character-by-character reveal */}
@@ -296,7 +284,7 @@ export default function HeroSection() {
                       ...(char === " " ? { width: "0.3em" } : {}),
                     }}
                   >
-                    {char === " " ? " " : char}
+                    {char === " " ? "\u00a0" : char}
                   </motion.span>
                 ))}
               </span>
@@ -309,19 +297,15 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 1.2 }}
               className="text-lg md:text-xl text-slate-400 max-w-lg mx-auto lg:mx-0 mb-8"
             >
-              Every token is minted by the community, backed by mathematics, and settled on-chain.
+              {t.hero.description}
             </motion.p>
 
-            {/* Badges — slide in from different directions */}
+            {/* Badges */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-8">
               {badges.map((badge, i) => (
                 <motion.div
-                  key={badge.text}
-                  initial={{
-                    opacity: 0,
-                    x: badge.from.x,
-                    y: badge.from.y,
-                  }}
+                  key={i}
+                  initial={{ opacity: 0, x: badge.from.x, y: badge.from.y }}
                   animate={{ opacity: 1, x: 0, y: 0 }}
                   transition={{
                     duration: 0.6,
@@ -338,7 +322,7 @@ export default function HeroSection() {
               ))}
             </div>
 
-            {/* CTA Buttons — scale up with spring */}
+            {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -355,13 +339,13 @@ export default function HeroSection() {
                 href="#philosophy"
                 className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-bg-primary bg-neon-cyan hover:bg-neon-cyan/90 glow-cyan transition-all duration-300"
               >
-                Explore Protocol
+                {t.hero.cta1}
               </a>
               <a
                 href="#"
                 className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-neon-cyan border border-neon-cyan/50 hover:bg-neon-cyan/10 transition-all duration-300"
               >
-                Read Whitepaper
+                {t.hero.cta2}
               </a>
             </motion.div>
           </div>
@@ -378,7 +362,7 @@ export default function HeroSection() {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         style={{ opacity: scrollIndicatorOpacity }}
       >
-        <span className="text-xs text-slate-500 uppercase tracking-wider">Scroll</span>
+        <span className="text-xs text-slate-500 uppercase tracking-wider">{t.hero.scroll}</span>
         <motion.svg
           className="w-5 h-5 text-slate-500"
           fill="none"

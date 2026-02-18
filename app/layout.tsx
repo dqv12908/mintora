@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
-import Script from "next/script";
 import SmoothScrollProvider from "@/providers/SmoothScrollProvider";
+import { LanguageProvider } from "@/providers/LanguageProvider";
 import "./globals.css";
 
 const inter = Inter({
@@ -32,31 +32,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body className={`${inter.className} antialiased overflow-x-clip`}>
-        <SmoothScrollProvider>{children}</SmoothScrollProvider>
-
-        {/* Off-screen mount point for Google Translate widget (must NOT be display:none) */}
-        <div
-          id="google_translate_element"
-          style={{ position: "absolute", top: "-9999px", left: "-9999px", height: "1px", overflow: "hidden" }}
-        />
-
-        {/* Google Translate init — must run before the translate script */}
-        <Script id="google-translate-init" strategy="afterInteractive">
-          {`
-            window.googleTranslateElementInit = function () {
-              new window.google.translate.TranslateElement(
-                { pageLanguage: 'en', autoDisplay: false },
-                'google_translate_element'
-              );
-            };
-          `}
-        </Script>
-
-        {/* Google Translate library */}
-        <Script
-          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-          strategy="afterInteractive"
-        />
+        <LanguageProvider>
+          <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        </LanguageProvider>
       </body>
     </html>
   );
