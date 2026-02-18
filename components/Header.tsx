@@ -36,6 +36,16 @@ function LanguageSelector({ onSelect }: { onSelect?: () => void }) {
   const [current, setCurrent] = useState<Language>(languages[0]);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  // Restore displayed language from googtrans cookie on mount
+  useEffect(() => {
+    const match = document.cookie.match(/googtrans=\/en\/([^;]+)/);
+    if (match) {
+      const code = decodeURIComponent(match[1]);
+      const found = languages.find((l) => l.code === code);
+      if (found) setCurrent(found);
+    }
+  }, []);
+
   // Close dropdown when clicking outside
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -47,24 +57,33 @@ function LanguageSelector({ onSelect }: { onSelect?: () => void }) {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
+  const triggerGoogleTranslate = (code: string) => {
+    const select = document.querySelector<HTMLSelectElement>(".goog-te-combo");
+    if (select) {
+      select.value = code;
+      // bubbles:true is required — GT listens at document level
+      select.dispatchEvent(new Event("change", { bubbles: true }));
+      return true;
+    }
+    return false;
+  };
+
   const changeLanguage = (lang: Language) => {
     setCurrent(lang);
     setOpen(false);
     onSelect?.();
 
     if (lang.code === "en") {
-      // Clear Google Translate cookies and reload to restore original
-      document.cookie = "googtrans=/en/en; path=/";
-      document.cookie = `googtrans=/en/en; domain=.${window.location.hostname}; path=/`;
+      // Reload to fully restore original English content
+      document.cookie = "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT";
+      document.cookie = `googtrans=; domain=.${window.location.hostname}; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT`;
       window.location.reload();
       return;
     }
 
-    // Trigger Google Translate by updating its hidden combo select
-    const select = document.querySelector<HTMLSelectElement>(".goog-te-combo");
-    if (select) {
-      select.value = lang.code;
-      select.dispatchEvent(new Event("change"));
+    // Try immediately; if GT widget isn't initialised yet, retry after 500 ms
+    if (!triggerGoogleTranslate(lang.code)) {
+      setTimeout(() => triggerGoogleTranslate(lang.code), 500);
     }
   };
 

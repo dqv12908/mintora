@@ -189,9 +189,19 @@
 .goog-te-banner-frame,
 .goog-te-balloon-frame,
 #goog-gt-tt,
-.goog-tooltip,
-.goog-te-gadget {
+.goog-tooltip {
   display: none !important;
+}
+/* Keep .goog-te-gadget in the DOM (needed for the combo select to work)
+   but render it off-screen so it is never visible */
+.goog-te-gadget {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 body {

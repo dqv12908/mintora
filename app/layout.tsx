@@ -34,8 +34,11 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased overflow-x-clip`}>
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
 
-        {/* Hidden mount point for Google Translate widget */}
-        <div id="google_translate_element" style={{ display: "none" }} />
+        {/* Off-screen mount point for Google Translate widget (must NOT be display:none) */}
+        <div
+          id="google_translate_element"
+          style={{ position: "absolute", top: "-9999px", left: "-9999px", height: "1px", overflow: "hidden" }}
+        />
 
         {/* Google Translate init — must run before the translate script */}
         <Script id="google-translate-init" strategy="afterInteractive">
