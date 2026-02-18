@@ -152,7 +152,7 @@ export default function Mechanism() {
             </div>
 
             {/* Right column (iPad) - 55% */}
-            <div className="w-full lg:w-[55%] flex justify-center overflow-hidden">
+            <div className="w-full lg:w-[55%] flex justify-center">
               <IPadFrame>
                 <div className="relative w-full h-full">
                   {/* Stacked demos */}
