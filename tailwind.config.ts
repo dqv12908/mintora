@@ -35,6 +35,8 @@ const config: Config = {
         "draw-circle": "draw-circle 2s ease-out forwards",
         "scan-line": "scan-line 3s linear infinite",
         shimmer: "shimmer 2s linear infinite",
+        blink: "blink 1s step-end infinite",
+        "matrix-fall": "matrix-fall 8s linear infinite",
       },
       keyframes: {
         "pulse-glow": {

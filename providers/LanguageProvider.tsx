@@ -20,15 +20,23 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   // Restore saved language on mount
   useEffect(() => {
-    const saved = localStorage.getItem("mintoria-lang") as LangCode | null;
-    if (saved && translations[saved]) {
-      setLangState(saved);
+    try {
+      const saved = localStorage.getItem("mintoria-lang") as LangCode | null;
+      if (saved && translations[saved]) {
+        setLangState(saved);
+      }
+    } catch {
+      // localStorage unavailable (sandboxed iframe, privacy mode, etc.)
     }
   }, []);
 
   const setLang = (code: LangCode) => {
     setLangState(code);
-    localStorage.setItem("mintoria-lang", code);
+    try {
+      localStorage.setItem("mintoria-lang", code);
+    } catch {
+      // localStorage unavailable
+    }
   };
 
   return (

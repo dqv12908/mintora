@@ -252,7 +252,8 @@ export default function InvestmentValue() {
             {(() => {
               const title = t.investment.title;
               const words = title.split(" ");
-              const last = words.pop();
+              if (words.length <= 1) return <span className="text-gradient-cyan-purple">{title}</span>;
+              const last = words.pop()!;
               return (
                 <>
                   {words.join(" ")}{" "}
@@ -273,8 +274,8 @@ export default function InvestmentValue() {
               key={i}
               title={benefit.title}
               description={benefit.description}
-              illustration={illustrations[i]}
-              entrance={entrances[i]}
+              illustration={illustrations[i] ?? illustrations[0]}
+              entrance={entrances[i] ?? entrances[0]}
               index={i}
             />
           ))}

@@ -82,7 +82,8 @@ export default function Mechanism() {
                     }
                     // For other languages, highlight the last word
                     const words = title.split(" ");
-                    const last = words.pop();
+                    if (words.length <= 1) return <span className="text-gradient-cyan-purple">{title}</span>;
+                    const last = words.pop()!;
                     return (
                       <>
                         {words.join(" ")}{" "}
@@ -103,8 +104,8 @@ export default function Mechanism() {
                     key={i}
                     className="absolute top-0 left-0 right-0"
                     style={{
-                      opacity: layerTransforms[i].opacity,
-                      y: layerTransforms[i].y,
+                      opacity: layerTransforms[i]?.opacity ?? 0,
+                      y: layerTransforms[i]?.y ?? 0,
                     }}
                   >
                     <div className="flex items-center gap-3 mb-4">
@@ -151,7 +152,7 @@ export default function Mechanism() {
                       <motion.div
                         key={i}
                         className="absolute inset-0"
-                        style={{ opacity: demoOpacities[i] }}
+                        style={{ opacity: demoOpacities[i] ?? 0 }}
                       >
                         <Demo isActive={activeIndex === i} />
                       </motion.div>

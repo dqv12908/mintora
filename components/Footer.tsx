@@ -64,7 +64,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-white/5 text-center">
-          <p className="text-xs text-slate-600">
+          <p className="text-xs text-slate-600" suppressHydrationWarning>
             &copy; {new Date().getFullYear()} {t.footer.copyright}
           </p>
         </div>

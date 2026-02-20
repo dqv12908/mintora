@@ -16,18 +16,22 @@ function TypewriterText({ text, delay = 0, speed = 80 }: { text: string; delay?:
     if (!isInView) return;
 
     let i = 0;
+    let interval: ReturnType<typeof setInterval> | undefined;
+
     const timeout = setTimeout(() => {
-      const interval = setInterval(() => {
+      interval = setInterval(() => {
         i++;
         setDisplayed(text.slice(0, i));
         if (i >= text.length) {
           clearInterval(interval);
         }
       }, speed);
-      return () => clearInterval(interval);
     }, delay);
 
-    return () => clearTimeout(timeout);
+    return () => {
+      clearTimeout(timeout);
+      clearInterval(interval);
+    };
   }, [isInView, text, delay, speed]);
 
   return (
@@ -115,7 +119,8 @@ export default function DataDashboard() {
             {(() => {
               const title = t.dashboard.title;
               const words = title.split(" ");
-              const last = words.pop();
+              if (words.length <= 1) return <span className="text-gradient-cyan-purple">{title}</span>;
+              const last = words.pop()!;
               return (
                 <>
                   {words.join(" ")}{" "}

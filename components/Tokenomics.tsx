@@ -166,7 +166,8 @@ export default function Tokenomics() {
             {(() => {
               const title = t.tokenomics.title;
               const words = title.split(" ");
-              const last = words.pop();
+              if (words.length <= 1) return <span className="text-gradient-cyan-purple">{title}</span>;
+              const last = words.pop()!;
               return (
                 <>
                   {words.join(" ")}{" "}
