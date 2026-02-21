@@ -227,10 +227,10 @@ export default function HeroSection() {
 
       {/* Layer 4: Content */}
       <motion.div
-        className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 w-full will-change-transform"
+        className="relative z-10 max-w-6xl 2xl:max-w-7xl mx-auto px-4 sm:px-6 w-full will-change-transform"
         style={{ y: contentY, opacity: contentOpacity }}
       >
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] gap-8 lg:gap-12 items-center">
           {/* Left: Text content */}
           <div className="text-center lg:text-left order-1">
             {/* Protocol tag */}
@@ -266,7 +266,7 @@ export default function HeroSection() {
               </span>
             </h1>
 
-            <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-heading font-bold uppercase leading-tight mb-5">
+            <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-heading font-bold uppercase leading-tight mb-5 lg:whitespace-nowrap">
               <span className="inline">
                 {subtitleChars.map((char, i) => (
                   <motion.span
