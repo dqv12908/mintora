@@ -102,7 +102,7 @@ const translations: Record<LangCode, Translation> = {
       badge2: "Self-Generated",
       badge3: "Verifiable",
       cta1: "Explore Protocol",
-      cta2: "Read Whitepaper",
+      cta2: "Read Documents",
       scroll: "Scroll",
     },
     philosophy: {
@@ -118,10 +118,10 @@ const translations: Record<LangCode, Translation> = {
       ],
       mintoriaWayTitle: "The Mintoria Way",
       mintoriaWay: [
-        "100% community minted — zero pre-allocation",
+        "100% community minted , zero pre-allocation",
         "Transparent on-chain issuance rules",
         "Math-driven scarcity with reserve backing",
-        "Trustless protocol — code is the guarantee",
+        "Trustless protocol , code is the guarantee",
       ],
     },
     mechanism: {
@@ -140,13 +140,13 @@ const translations: Record<LangCode, Translation> = {
           title: "Economic Control",
           subtitle: "Self-Regulating Feedback",
           description:
-            "Mint cost increases with demand, creating natural price discovery. Supply adjusts algorithmically — no governance votes, no manual intervention.",
+            "Mint cost increases with demand, creating natural price discovery. Supply adjusts algorithmically , no governance votes, no manual intervention.",
         },
         {
           title: "On-Chain Settlement",
           subtitle: "Immutable Record",
           description:
-            "Every transaction — mint, burn, and reserve allocation — is settled immutably on-chain. Full auditability, zero off-chain dependencies.",
+            "Every transaction , mint, burn, and reserve allocation , is settled immutably on-chain. Full auditability, zero off-chain dependencies.",
         },
       ],
     },
@@ -179,7 +179,7 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "Intrinsic Value",
           description:
-            "Every token costs real assets to mint, creating a natural price floor. No free tokens, no dilution — only value-backed issuance.",
+            "Every token costs real assets to mint, creating a natural price floor. No free tokens, no dilution , only value-backed issuance.",
         },
         {
           title: "Predictability",
@@ -189,12 +189,12 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "Safety First",
           description:
-            "Immutable smart contracts, no admin keys, no upgrade proxies. The protocol cannot be altered, paused, or manipulated by anyone — including its creators.",
+            "Immutable smart contracts, no admin keys, no upgrade proxies. The protocol cannot be altered, paused, or manipulated by anyone , including its creators.",
         },
         {
           title: "Governance Power",
           description:
-            "Token holders gain proportional governance rights. Shape the protocol's future through on-chain voting — true decentralized decision making.",
+            "Token holders gain proportional governance rights. Shape the protocol's future through on-chain voting , true decentralized decision making.",
         },
       ],
     },
@@ -213,7 +213,7 @@ const translations: Record<LangCode, Translation> = {
       tagline:
         "Protocol Driven Issuance.\nBuilt on trust in mathematics, not promises.",
       resources: "Resources",
-      resourceLinks: ["Whitepaper", "GitHub", "Audit Reports", "Documentation"],
+      resourceLinks: ["Documents", "GitHub", "Audit Reports", "Documentation"],
       community: "Community",
       communityLinks: ["Twitter / X", "Discord", "Telegram", "Medium"],
       copyright:
@@ -239,7 +239,7 @@ const translations: Record<LangCode, Translation> = {
       badge2: "Selbst generiert",
       badge3: "Verifizierbar",
       cta1: "Protokoll erkunden",
-      cta2: "Whitepaper lesen",
+      cta2: "Dokumente lesen",
       scroll: "Scrollen",
     },
     philosophy: {
@@ -255,10 +255,10 @@ const translations: Record<LangCode, Translation> = {
       ],
       mintoriaWayTitle: "Der Mintoria-Weg",
       mintoriaWay: [
-        "100% von der Community geminted — null Vorab-Zuteilung",
+        "100% von der Community geminted , null Vorab-Zuteilung",
         "Transparente On-Chain-Ausgaberegeln",
         "Mathematisch basierte Knappheit mit Reserve-Deckung",
-        "Vertrauensloses Protokoll — Code ist die Garantie",
+        "Vertrauensloses Protokoll , Code ist die Garantie",
       ],
     },
     mechanism: {
@@ -277,13 +277,13 @@ const translations: Record<LangCode, Translation> = {
           title: "Wirtschaftskontrolle",
           subtitle: "Selbstregulierende Rückkopplung",
           description:
-            "Die Minting-Kosten steigen mit der Nachfrage und schaffen eine natürliche Preisfindung. Das Angebot passt sich algorithmisch an — keine Governance-Abstimmungen, keine manuelle Intervention.",
+            "Die Minting-Kosten steigen mit der Nachfrage und schaffen eine natürliche Preisfindung. Das Angebot passt sich algorithmisch an , keine Governance-Abstimmungen, keine manuelle Intervention.",
         },
         {
           title: "On-Chain-Abrechnung",
           subtitle: "Unveränderliches Register",
           description:
-            "Jede Transaktion — Mint, Burn und Reserve-Zuteilung — wird unveränderlich on-chain abgerechnet. Vollständige Prüfbarkeit, keine Off-Chain-Abhängigkeiten.",
+            "Jede Transaktion , Mint, Burn und Reserve-Zuteilung , wird unveränderlich on-chain abgerechnet. Vollständige Prüfbarkeit, keine Off-Chain-Abhängigkeiten.",
         },
       ],
     },
@@ -316,7 +316,7 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "Innerer Wert",
           description:
-            "Jeder Token kostet reale Vermögenswerte zum Minting und schafft eine natürliche Preisuntergrenze. Keine kostenlosen Token, keine Verwässerung — nur wertgedeckte Ausgabe.",
+            "Jeder Token kostet reale Vermögenswerte zum Minting und schafft eine natürliche Preisuntergrenze. Keine kostenlosen Token, keine Verwässerung , nur wertgedeckte Ausgabe.",
         },
         {
           title: "Vorhersagbarkeit",
@@ -326,12 +326,12 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "Sicherheit zuerst",
           description:
-            "Unveränderliche Smart Contracts, keine Admin-Schlüssel, keine Upgrade-Proxies. Das Protokoll kann von niemandem verändert, pausiert oder manipuliert werden — auch nicht von seinen Schöpfern.",
+            "Unveränderliche Smart Contracts, keine Admin-Schlüssel, keine Upgrade-Proxies. Das Protokoll kann von niemandem verändert, pausiert oder manipuliert werden , auch nicht von seinen Schöpfern.",
         },
         {
           title: "Governance-Macht",
           description:
-            "Token-Inhaber erhalten proportionale Governance-Rechte. Gestalten Sie die Zukunft des Protokolls durch On-Chain-Abstimmungen — echte dezentrale Entscheidungsfindung.",
+            "Token-Inhaber erhalten proportionale Governance-Rechte. Gestalten Sie die Zukunft des Protokolls durch On-Chain-Abstimmungen , echte dezentrale Entscheidungsfindung.",
         },
       ],
     },
@@ -350,7 +350,7 @@ const translations: Record<LangCode, Translation> = {
       tagline:
         "Protokollgesteuertes Ausgaben.\nAufgebaut auf Vertrauen in Mathematik, nicht in Versprechen.",
       resources: "Ressourcen",
-      resourceLinks: ["Whitepaper", "GitHub", "Prüfberichte", "Dokumentation"],
+      resourceLinks: ["Dokumente", "GitHub", "Prüfberichte", "Dokumentation"],
       community: "Gemeinschaft",
       communityLinks: ["Twitter / X", "Discord", "Telegram", "Medium"],
       copyright:
@@ -376,7 +376,7 @@ const translations: Record<LangCode, Translation> = {
       badge2: "Auto-Generado",
       badge3: "Verificable",
       cta1: "Explorar Protocolo",
-      cta2: "Leer Whitepaper",
+      cta2: "Leer documentación",
       scroll: "Desplazar",
     },
     philosophy: {
@@ -392,10 +392,10 @@ const translations: Record<LangCode, Translation> = {
       ],
       mintoriaWayTitle: "El Método Mintoria",
       mintoriaWay: [
-        "100% acuñado por la comunidad — sin pre-asignación",
+        "100% acuñado por la comunidad , sin pre-asignación",
         "Reglas de emisión transparentes on-chain",
         "Escasez matemática con respaldo de reservas",
-        "Protocolo sin confianza — el código es la garantía",
+        "Protocolo sin confianza , el código es la garantía",
       ],
     },
     mechanism: {
@@ -414,13 +414,13 @@ const translations: Record<LangCode, Translation> = {
           title: "Control Económico",
           subtitle: "Retroalimentación Autorreguladora",
           description:
-            "El costo de acuñación aumenta con la demanda, creando un descubrimiento de precios natural. El suministro se ajusta algorítmicamente — sin votos de gobernanza, sin intervención manual.",
+            "El costo de acuñación aumenta con la demanda, creando un descubrimiento de precios natural. El suministro se ajusta algorítmicamente , sin votos de gobernanza, sin intervención manual.",
         },
         {
           title: "Liquidación On-Chain",
           subtitle: "Registro Inmutable",
           description:
-            "Cada transacción — acuñación, quema y asignación de reservas — se liquida de forma inmutable on-chain. Auditabilidad completa, cero dependencias off-chain.",
+            "Cada transacción , acuñación, quema y asignación de reservas , se liquida de forma inmutable on-chain. Auditabilidad completa, cero dependencias off-chain.",
         },
       ],
     },
@@ -453,7 +453,7 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "Valor Intrínseco",
           description:
-            "Cada token cuesta activos reales para acuñar, creando un precio mínimo natural. Sin tokens gratuitos, sin dilución — solo emisión respaldada por valor.",
+            "Cada token cuesta activos reales para acuñar, creando un precio mínimo natural. Sin tokens gratuitos, sin dilución , solo emisión respaldada por valor.",
         },
         {
           title: "Predecibilidad",
@@ -463,12 +463,12 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "Seguridad Primero",
           description:
-            "Contratos inteligentes inmutables, sin claves de administrador, sin proxies de actualización. El protocolo no puede ser alterado, pausado o manipulado por nadie — incluyendo sus creadores.",
+            "Contratos inteligentes inmutables, sin claves de administrador, sin proxies de actualización. El protocolo no puede ser alterado, pausado o manipulado por nadie , incluyendo sus creadores.",
         },
         {
           title: "Poder de Gobernanza",
           description:
-            "Los titulares de tokens obtienen derechos de gobernanza proporcionales. Dé forma al futuro del protocolo mediante votación on-chain — verdadera toma de decisiones descentralizada.",
+            "Los titulares de tokens obtienen derechos de gobernanza proporcionales. Dé forma al futuro del protocolo mediante votación on-chain , verdadera toma de decisiones descentralizada.",
         },
       ],
     },
@@ -487,7 +487,7 @@ const translations: Record<LangCode, Translation> = {
       tagline:
         "Emisión Impulsada por Protocolo.\nConstructida sobre confianza en las matemáticas, no en promesas.",
       resources: "Recursos",
-      resourceLinks: ["Whitepaper", "GitHub", "Informes de Auditoría", "Documentación"],
+      resourceLinks: ["Documentación", "GitHub", "Informes de Auditoría", "Documentos"],
       community: "Comunidad",
       communityLinks: ["Twitter / X", "Discord", "Telegram", "Medium"],
       copyright:
@@ -513,7 +513,7 @@ const translations: Record<LangCode, Translation> = {
       badge2: "Auto-Généré",
       badge3: "Vérifiable",
       cta1: "Explorer le Protocole",
-      cta2: "Lire le Whitepaper",
+      cta2: "Lire la documentation",
       scroll: "Défiler",
     },
     philosophy: {
@@ -529,10 +529,10 @@ const translations: Record<LangCode, Translation> = {
       ],
       mintoriaWayTitle: "La Méthode Mintoria",
       mintoriaWay: [
-        "100% frappé par la communauté — zéro pré-allocation",
+        "100% frappé par la communauté , zéro pré-allocation",
         "Règles d'émission on-chain transparentes",
         "Rareté mathématique avec soutien de réserve",
-        "Protocole sans confiance — le code est la garantie",
+        "Protocole sans confiance , le code est la garantie",
       ],
     },
     mechanism: {
@@ -551,13 +551,13 @@ const translations: Record<LangCode, Translation> = {
           title: "Contrôle Économique",
           subtitle: "Rétroaction Autorégulée",
           description:
-            "Le coût de frappe augmente avec la demande, créant une découverte de prix naturelle. L'offre s'ajuste algorithmiquement — sans votes de gouvernance, sans intervention manuelle.",
+            "Le coût de frappe augmente avec la demande, créant une découverte de prix naturelle. L'offre s'ajuste algorithmiquement , sans votes de gouvernance, sans intervention manuelle.",
         },
         {
           title: "Règlement On-Chain",
           subtitle: "Registre Immuable",
           description:
-            "Chaque transaction — frappe, brûlage et allocation de réserve — est réglée de manière immuable on-chain. Auditabilité complète, zéro dépendance off-chain.",
+            "Chaque transaction , frappe, brûlage et allocation de réserve , est réglée de manière immuable on-chain. Auditabilité complète, zéro dépendance off-chain.",
         },
       ],
     },
@@ -590,7 +590,7 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "Valeur Intrinsèque",
           description:
-            "Chaque jeton coûte de vrais actifs à frapper, créant un plancher de prix naturel. Pas de jetons gratuits, pas de dilution — seulement une émission soutenue par la valeur.",
+            "Chaque jeton coûte de vrais actifs à frapper, créant un plancher de prix naturel. Pas de jetons gratuits, pas de dilution , seulement une émission soutenue par la valeur.",
         },
         {
           title: "Prévisibilité",
@@ -600,12 +600,12 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "La Sécurité d'Abord",
           description:
-            "Contrats intelligents immuables, sans clés administrateur, sans proxies de mise à niveau. Le protocole ne peut être modifié, mis en pause ou manipulé par personne — y compris ses créateurs.",
+            "Contrats intelligents immuables, sans clés administrateur, sans proxies de mise à niveau. Le protocole ne peut être modifié, mis en pause ou manipulé par personne , y compris ses créateurs.",
         },
         {
           title: "Pouvoir de Gouvernance",
           description:
-            "Les détenteurs de jetons obtiennent des droits de gouvernance proportionnels. Façonnez l'avenir du protocole par vote on-chain — vraie prise de décision décentralisée.",
+            "Les détenteurs de jetons obtiennent des droits de gouvernance proportionnels. Façonnez l'avenir du protocole par vote on-chain , vraie prise de décision décentralisée.",
         },
       ],
     },
@@ -624,7 +624,7 @@ const translations: Record<LangCode, Translation> = {
       tagline:
         "Émission Pilotée par Protocole.\nConstruite sur la confiance dans les mathématiques, pas les promesses.",
       resources: "Ressources",
-      resourceLinks: ["Whitepaper", "GitHub", "Rapports d'Audit", "Documentation"],
+      resourceLinks: ["Documents", "GitHub", "Rapports d'Audit", "Documentation"],
       community: "Communauté",
       communityLinks: ["Twitter / X", "Discord", "Telegram", "Medium"],
       copyright:
@@ -650,7 +650,7 @@ const translations: Record<LangCode, Translation> = {
       badge2: "Auto-Generato",
       badge3: "Verificabile",
       cta1: "Esplora il Protocollo",
-      cta2: "Leggi il Whitepaper",
+      cta2: "Leggi la documentazione",
       scroll: "Scorri",
     },
     philosophy: {
@@ -666,10 +666,10 @@ const translations: Record<LangCode, Translation> = {
       ],
       mintoriaWayTitle: "Il Modo Mintoria",
       mintoriaWay: [
-        "100% coniato dalla community — zero pre-allocazione",
+        "100% coniato dalla community , zero pre-allocazione",
         "Regole di emissione on-chain trasparenti",
         "Scarsità matematica con supporto di riserva",
-        "Protocollo senza fiducia — il codice è la garanzia",
+        "Protocollo senza fiducia , il codice è la garanzia",
       ],
     },
     mechanism: {
@@ -688,13 +688,13 @@ const translations: Record<LangCode, Translation> = {
           title: "Controllo Economico",
           subtitle: "Feedback Autoregolante",
           description:
-            "Il costo di conio aumenta con la domanda, creando una scoperta naturale del prezzo. L'offerta si adatta algoritmicamente — senza voti di governance, senza intervento manuale.",
+            "Il costo di conio aumenta con la domanda, creando una scoperta naturale del prezzo. L'offerta si adatta algoritmicamente , senza voti di governance, senza intervento manuale.",
         },
         {
           title: "Liquidazione On-Chain",
           subtitle: "Registro Immutabile",
           description:
-            "Ogni transazione — conio, burn e allocazione di riserva — viene liquidata in modo immutabile on-chain. Auditabilità completa, zero dipendenze off-chain.",
+            "Ogni transazione , conio, burn e allocazione di riserva , viene liquidata in modo immutabile on-chain. Auditabilità completa, zero dipendenze off-chain.",
         },
       ],
     },
@@ -727,7 +727,7 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "Valore Intrinseco",
           description:
-            "Ogni token costa asset reali per essere coniato, creando un livello di prezzo naturale. Nessun token gratuito, nessuna diluizione — solo emissione supportata da valore.",
+            "Ogni token costa asset reali per essere coniato, creando un livello di prezzo naturale. Nessun token gratuito, nessuna diluizione , solo emissione supportata da valore.",
         },
         {
           title: "Prevedibilità",
@@ -737,12 +737,12 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "Sicurezza Prima di Tutto",
           description:
-            "Contratti intelligenti immutabili, nessuna chiave admin, nessun proxy di aggiornamento. Il protocollo non può essere alterato, messo in pausa o manipolato da nessuno — inclusi i suoi creatori.",
+            "Contratti intelligenti immutabili, nessuna chiave admin, nessun proxy di aggiornamento. Il protocollo non può essere alterato, messo in pausa o manipolato da nessuno , inclusi i suoi creatori.",
         },
         {
           title: "Potere di Governance",
           description:
-            "I detentori di token ottengono diritti di governance proporzionali. Forma il futuro del protocollo attraverso il voto on-chain — vera decisione decentralizzata.",
+            "I detentori di token ottengono diritti di governance proporzionali. Forma il futuro del protocollo attraverso il voto on-chain , vera decisione decentralizzata.",
         },
       ],
     },
@@ -761,7 +761,7 @@ const translations: Record<LangCode, Translation> = {
       tagline:
         "Emissione Guidata dal Protocollo.\nCostruita sulla fiducia nella matematica, non nelle promesse.",
       resources: "Risorse",
-      resourceLinks: ["Whitepaper", "GitHub", "Rapporti di Audit", "Documentazione"],
+      resourceLinks: ["Documenti", "GitHub", "Rapporti di Audit", "Documentazione"],
       community: "Comunità",
       communityLinks: ["Twitter / X", "Discord", "Telegram", "Medium"],
       copyright:
@@ -787,7 +787,7 @@ const translations: Record<LangCode, Translation> = {
       badge2: "自己生成",
       badge3: "検証可能",
       cta1: "プロトコルを探る",
-      cta2: "ホワイトペーパーを読む",
+      cta2: "ドキュメントを読む",
       scroll: "スクロール",
     },
     philosophy: {
@@ -803,10 +803,10 @@ const translations: Record<LangCode, Translation> = {
       ],
       mintoriaWayTitle: "Mintoriaの方法",
       mintoriaWay: [
-        "100%コミュニティ発行 — 事前割り当てなし",
+        "100%コミュニティ発行 , 事前割り当てなし",
         "透明なオンチェーン発行ルール",
         "準備金によって裏付けられた数学的希少性",
-        "信頼不要プロトコル — コードが保証",
+        "信頼不要プロトコル , コードが保証",
       ],
     },
     mechanism: {
@@ -825,13 +825,13 @@ const translations: Record<LangCode, Translation> = {
           title: "経済コントロール",
           subtitle: "自己調整フィードバック",
           description:
-            "需要に応じてミントコストが上昇し、自然な価格発見が生まれます。供給はアルゴリズムで調整されます — ガバナンス投票も手動介入も不要です。",
+            "需要に応じてミントコストが上昇し、自然な価格発見が生まれます。供給はアルゴリズムで調整されます , ガバナンス投票も手動介入も不要です。",
         },
         {
           title: "オンチェーン決済",
           subtitle: "不変の記録",
           description:
-            "すべてのトランザクション — ミント、バーン、準備金割り当て — は不変でオンチェーンに決済されます。完全な監査可能性、オフチェーン依存なし。",
+            "すべてのトランザクション , ミント、バーン、準備金割り当て , は不変でオンチェーンに決済されます。完全な監査可能性、オフチェーン依存なし。",
         },
       ],
     },
@@ -864,7 +864,7 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "固有の価値",
           description:
-            "すべてのトークンはミントに実際の資産を要し、自然な価格下限を作ります。無料トークンも希薄化もなし — 価値裏付けの発行のみ。",
+            "すべてのトークンはミントに実際の資産を要し、自然な価格下限を作ります。無料トークンも希薄化もなし , 価値裏付けの発行のみ。",
         },
         {
           title: "予測可能性",
@@ -874,12 +874,12 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "安全性最優先",
           description:
-            "不変のスマートコントラクト、管理者キーなし、アップグレードプロキシなし。プロトコルは誰によっても変更、一時停止、操作できません — 創設者も含めて。",
+            "不変のスマートコントラクト、管理者キーなし、アップグレードプロキシなし。プロトコルは誰によっても変更、一時停止、操作できません , 創設者も含めて。",
         },
         {
           title: "ガバナンス権力",
           description:
-            "トークン保有者は比例したガバナンス権を得ます。オンチェーン投票でプロトコルの未来を形成しましょう — 真の分散型意思決定。",
+            "トークン保有者は比例したガバナンス権を得ます。オンチェーン投票でプロトコルの未来を形成しましょう , 真の分散型意思決定。",
         },
       ],
     },
@@ -898,7 +898,7 @@ const translations: Record<LangCode, Translation> = {
       tagline:
         "プロトコル駆動の発行。\n数学への信頼に基づいて構築、約束ではなく。",
       resources: "リソース",
-      resourceLinks: ["ホワイトペーパー", "GitHub", "監査レポート", "ドキュメント"],
+      resourceLinks: ["ドキュメント", "GitHub", "監査レポート", "ドキュメント"],
       community: "コミュニティ",
       communityLinks: ["Twitter / X", "Discord", "Telegram", "Medium"],
       copyright:
@@ -924,7 +924,7 @@ const translations: Record<LangCode, Translation> = {
       badge2: "자체 생성",
       badge3: "검증 가능",
       cta1: "프로토콜 탐색",
-      cta2: "백서 읽기",
+      cta2: "문서 읽기",
       scroll: "스크롤",
     },
     philosophy: {
@@ -940,10 +940,10 @@ const translations: Record<LangCode, Translation> = {
       ],
       mintoriaWayTitle: "Mintoria 방식",
       mintoriaWay: [
-        "100% 커뮤니티 발행 — 사전 할당 없음",
+        "100% 커뮤니티 발행 , 사전 할당 없음",
         "투명한 온체인 발행 규칙",
         "준비금으로 뒷받침된 수학적 희소성",
-        "신뢰 없는 프로토콜 — 코드가 보증",
+        "신뢰 없는 프로토콜 , 코드가 보증",
       ],
     },
     mechanism: {
@@ -962,13 +962,13 @@ const translations: Record<LangCode, Translation> = {
           title: "경제적 제어",
           subtitle: "자기 조절 피드백",
           description:
-            "수요에 따라 민팅 비용이 증가하여 자연스러운 가격 발견이 이루어집니다. 공급은 알고리즘으로 조정됩니다 — 거버넌스 투표도, 수동 개입도 없습니다.",
+            "수요에 따라 민팅 비용이 증가하여 자연스러운 가격 발견이 이루어집니다. 공급은 알고리즘으로 조정됩니다 , 거버넌스 투표도, 수동 개입도 없습니다.",
         },
         {
           title: "온체인 정산",
           subtitle: "불변 기록",
           description:
-            "모든 거래 — 민트, 번, 준비금 할당 — 은 온체인에서 불변으로 정산됩니다. 완전한 감사 가능성, 오프체인 의존성 없음.",
+            "모든 거래 , 민트, 번, 준비금 할당 , 은 온체인에서 불변으로 정산됩니다. 완전한 감사 가능성, 오프체인 의존성 없음.",
         },
       ],
     },
@@ -1001,7 +1001,7 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "내재 가치",
           description:
-            "모든 토큰은 발행에 실제 자산이 필요하여 자연스러운 가격 하한선을 만듭니다. 무료 토큰도, 희석도 없습니다 — 가치 기반 발행만 있습니다.",
+            "모든 토큰은 발행에 실제 자산이 필요하여 자연스러운 가격 하한선을 만듭니다. 무료 토큰도, 희석도 없습니다 , 가치 기반 발행만 있습니다.",
         },
         {
           title: "예측 가능성",
@@ -1011,12 +1011,12 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "안전 최우선",
           description:
-            "불변의 스마트 컨트랙트, 관리자 키 없음, 업그레이드 프록시 없음. 프로토콜은 누구도 변경, 일시 중지 또는 조작할 수 없습니다 — 창작자를 포함하여.",
+            "불변의 스마트 컨트랙트, 관리자 키 없음, 업그레이드 프록시 없음. 프로토콜은 누구도 변경, 일시 중지 또는 조작할 수 없습니다 , 창작자를 포함하여.",
         },
         {
           title: "거버넌스 권한",
           description:
-            "토큰 보유자는 비례적인 거버넌스 권리를 얻습니다. 온체인 투표를 통해 프로토콜의 미래를 만들어 가세요 — 진정한 탈중앙화 의사결정.",
+            "토큰 보유자는 비례적인 거버넌스 권리를 얻습니다. 온체인 투표를 통해 프로토콜의 미래를 만들어 가세요 , 진정한 탈중앙화 의사결정.",
         },
       ],
     },
@@ -1035,7 +1035,7 @@ const translations: Record<LangCode, Translation> = {
       tagline:
         "프로토콜 기반 발행.\n약속이 아닌 수학에 대한 신뢰로 구축.",
       resources: "리소스",
-      resourceLinks: ["백서", "GitHub", "감사 보고서", "문서"],
+      resourceLinks: ["문서", "GitHub", "감사 보고서", "문서"],
       community: "커뮤니티",
       communityLinks: ["Twitter / X", "Discord", "Telegram", "Medium"],
       copyright:
@@ -1061,7 +1061,7 @@ const translations: Record<LangCode, Translation> = {
       badge2: "Auto-Gerado",
       badge3: "Verificável",
       cta1: "Explorar Protocolo",
-      cta2: "Ler Whitepaper",
+      cta2: "Ler documentação",
       scroll: "Rolar",
     },
     philosophy: {
@@ -1077,10 +1077,10 @@ const translations: Record<LangCode, Translation> = {
       ],
       mintoriaWayTitle: "O Método Mintoria",
       mintoriaWay: [
-        "100% cunhado pela comunidade — zero pré-alocação",
+        "100% cunhado pela comunidade , zero pré-alocação",
         "Regras de emissão on-chain transparentes",
         "Escassez matemática com respaldo de reservas",
-        "Protocolo sem confiança — o código é a garantia",
+        "Protocolo sem confiança , o código é a garantia",
       ],
     },
     mechanism: {
@@ -1099,13 +1099,13 @@ const translations: Record<LangCode, Translation> = {
           title: "Controle Econômico",
           subtitle: "Feedback Autorregulador",
           description:
-            "O custo de cunhagem aumenta com a demanda, criando uma descoberta de preços natural. O fornecimento se ajusta algoritmicamente — sem votos de governança, sem intervenção manual.",
+            "O custo de cunhagem aumenta com a demanda, criando uma descoberta de preços natural. O fornecimento se ajusta algoritmicamente , sem votos de governança, sem intervenção manual.",
         },
         {
           title: "Liquidação On-Chain",
           subtitle: "Registro Imutável",
           description:
-            "Cada transação — cunhagem, queima e alocação de reserva — é liquidada de forma imutável on-chain. Auditabilidade completa, zero dependências off-chain.",
+            "Cada transação , cunhagem, queima e alocação de reserva , é liquidada de forma imutável on-chain. Auditabilidade completa, zero dependências off-chain.",
         },
       ],
     },
@@ -1138,7 +1138,7 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "Valor Intrínseco",
           description:
-            "Cada token custa ativos reais para cunhar, criando um piso de preço natural. Sem tokens gratuitos, sem diluição — apenas emissão respaldada por valor.",
+            "Cada token custa ativos reais para cunhar, criando um piso de preço natural. Sem tokens gratuitos, sem diluição , apenas emissão respaldada por valor.",
         },
         {
           title: "Previsibilidade",
@@ -1148,12 +1148,12 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "Segurança em Primeiro Lugar",
           description:
-            "Contratos inteligentes imutáveis, sem chaves de administrador, sem proxies de atualização. O protocolo não pode ser alterado, pausado ou manipulado por ninguém — incluindo seus criadores.",
+            "Contratos inteligentes imutáveis, sem chaves de administrador, sem proxies de atualização. O protocolo não pode ser alterado, pausado ou manipulado por ninguém , incluindo seus criadores.",
         },
         {
           title: "Poder de Governança",
           description:
-            "Os detentores de tokens obtêm direitos de governança proporcionais. Molde o futuro do protocolo por meio de votação on-chain — verdadeira tomada de decisão descentralizada.",
+            "Os detentores de tokens obtêm direitos de governança proporcionais. Molde o futuro do protocolo por meio de votação on-chain , verdadeira tomada de decisão descentralizada.",
         },
       ],
     },
@@ -1172,7 +1172,7 @@ const translations: Record<LangCode, Translation> = {
       tagline:
         "Emissão Impulsionada por Protocolo.\nConstructa sobre confiança na matemática, não em promessas.",
       resources: "Recursos",
-      resourceLinks: ["Whitepaper", "GitHub", "Relatórios de Auditoria", "Documentação"],
+      resourceLinks: ["Documentação", "GitHub", "Relatórios de Auditoria", "Documentos"],
       community: "Comunidade",
       communityLinks: ["Twitter / X", "Discord", "Telegram", "Medium"],
       copyright:
@@ -1198,7 +1198,7 @@ const translations: Record<LangCode, Translation> = {
       badge2: "Tự tạo ra",
       badge3: "Có thể xác minh",
       cta1: "Khám phá Giao thức",
-      cta2: "Đọc Whitepaper",
+      cta2: "Đọc tài liệu",
       scroll: "Cuộn",
     },
     philosophy: {
@@ -1214,10 +1214,10 @@ const translations: Record<LangCode, Translation> = {
       ],
       mintoriaWayTitle: "Cách của Mintoria",
       mintoriaWay: [
-        "100% cộng đồng đúc — không phân bổ trước",
+        "100% cộng đồng đúc , không phân bổ trước",
         "Quy tắc phát hành on-chain minh bạch",
         "Sự khan hiếm theo toán học với dự phòng",
-        "Giao thức không cần tin cậy — code là bảo đảm",
+        "Giao thức không cần tin cậy , code là bảo đảm",
       ],
     },
     mechanism: {
@@ -1236,13 +1236,13 @@ const translations: Record<LangCode, Translation> = {
           title: "Kiểm soát Kinh tế",
           subtitle: "Phản hồi Tự điều chỉnh",
           description:
-            "Chi phí đúc tăng theo nhu cầu, tạo ra khám phá giá tự nhiên. Nguồn cung điều chỉnh theo thuật toán — không bỏ phiếu quản trị, không can thiệp thủ công.",
+            "Chi phí đúc tăng theo nhu cầu, tạo ra khám phá giá tự nhiên. Nguồn cung điều chỉnh theo thuật toán , không bỏ phiếu quản trị, không can thiệp thủ công.",
         },
         {
           title: "Thanh toán On-Chain",
           subtitle: "Hồ sơ Bất biến",
           description:
-            "Mỗi giao dịch — đúc, đốt và phân bổ dự trữ — được thanh toán bất biến trên chuỗi. Khả năng kiểm tra toàn diện, không phụ thuộc off-chain.",
+            "Mỗi giao dịch , đúc, đốt và phân bổ dự trữ , được thanh toán bất biến trên chuỗi. Khả năng kiểm tra toàn diện, không phụ thuộc off-chain.",
         },
       ],
     },
@@ -1275,7 +1275,7 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "Giá trị Nội tại",
           description:
-            "Mỗi token cần tài sản thực để đúc, tạo ra sàn giá tự nhiên. Không token miễn phí, không pha loãng — chỉ phát hành được giá trị bảo chứng.",
+            "Mỗi token cần tài sản thực để đúc, tạo ra sàn giá tự nhiên. Không token miễn phí, không pha loãng , chỉ phát hành được giá trị bảo chứng.",
         },
         {
           title: "Khả năng Dự đoán",
@@ -1285,12 +1285,12 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "An toàn Trước tiên",
           description:
-            "Hợp đồng thông minh bất biến, không khóa admin, không proxy nâng cấp. Giao thức không thể bị thay đổi, tạm dừng hoặc thao túng bởi bất kỳ ai — kể cả người tạo ra nó.",
+            "Hợp đồng thông minh bất biến, không khóa admin, không proxy nâng cấp. Giao thức không thể bị thay đổi, tạm dừng hoặc thao túng bởi bất kỳ ai , kể cả người tạo ra nó.",
         },
         {
           title: "Quyền lực Quản trị",
           description:
-            "Người nắm giữ token có quyền quản trị theo tỷ lệ. Định hình tương lai giao thức thông qua bỏ phiếu on-chain — ra quyết định phi tập trung thực sự.",
+            "Người nắm giữ token có quyền quản trị theo tỷ lệ. Định hình tương lai giao thức thông qua bỏ phiếu on-chain , ra quyết định phi tập trung thực sự.",
         },
       ],
     },
@@ -1309,7 +1309,7 @@ const translations: Record<LangCode, Translation> = {
       tagline:
         "Phát hành Theo Giao thức.\nXây dựng trên niềm tin vào toán học, không phải lời hứa.",
       resources: "Tài nguyên",
-      resourceLinks: ["Whitepaper", "GitHub", "Báo cáo Kiểm toán", "Tài liệu"],
+      resourceLinks: ["Tài liệu", "GitHub", "Báo cáo Kiểm toán", "Tài liệu"],
       community: "Cộng đồng",
       communityLinks: ["Twitter / X", "Discord", "Telegram", "Medium"],
       copyright:
@@ -1335,7 +1335,7 @@ const translations: Record<LangCode, Translation> = {
       badge2: "自我生成",
       badge3: "可驗證",
       cta1: "探索協議",
-      cta2: "閱讀白皮書",
+      cta2: "閱讀文件",
       scroll: "滾動",
     },
     philosophy: {
@@ -1351,10 +1351,10 @@ const translations: Record<LangCode, Translation> = {
       ],
       mintoriaWayTitle: "Mintoria 方式",
       mintoriaWay: [
-        "100% 社群鑄造 — 零預分配",
+        "100% 社群鑄造 , 零預分配",
         "透明的鏈上發行規則",
         "有儲備支撐的數學驅動稀缺性",
-        "無需信任的協議 — 代碼即保障",
+        "無需信任的協議 , 代碼即保障",
       ],
     },
     mechanism: {
@@ -1373,13 +1373,13 @@ const translations: Record<LangCode, Translation> = {
           title: "經濟控制",
           subtitle: "自我調節反饋",
           description:
-            "鑄造成本隨需求增加而上升，形成自然的價格發現機制。供應量通過算法調整 — 無需治理投票，無需人工干預。",
+            "鑄造成本隨需求增加而上升，形成自然的價格發現機制。供應量通過算法調整 , 無需治理投票，無需人工干預。",
         },
         {
           title: "鏈上結算",
           subtitle: "不可篡改的記錄",
           description:
-            "每筆交易 — 鑄造、銷毀和儲備分配 — 都在鏈上不可篡改地結算。完全可審計，零鏈下依賴。",
+            "每筆交易 , 鑄造、銷毀和儲備分配 , 都在鏈上不可篡改地結算。完全可審計，零鏈下依賴。",
         },
       ],
     },
@@ -1412,7 +1412,7 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "內在價值",
           description:
-            "每個代幣都需要真實資產才能鑄造，形成自然的價格下限。沒有免費代幣，沒有稀釋 — 只有以價值支撐的發行。",
+            "每個代幣都需要真實資產才能鑄造，形成自然的價格下限。沒有免費代幣，沒有稀釋 , 只有以價值支撐的發行。",
         },
         {
           title: "可預測性",
@@ -1422,12 +1422,12 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "安全第一",
           description:
-            "不可變智能合約，無管理員密鑰，無升級代理。協議無法被任何人修改、暫停或操控 — 包括其創建者。",
+            "不可變智能合約，無管理員密鑰，無升級代理。協議無法被任何人修改、暫停或操控 , 包括其創建者。",
         },
         {
           title: "治理權力",
           description:
-            "代幣持有者獲得按比例分配的治理權。通過鏈上投票塑造協議的未來 — 真正的去中心化決策。",
+            "代幣持有者獲得按比例分配的治理權。通過鏈上投票塑造協議的未來 , 真正的去中心化決策。",
         },
       ],
     },
@@ -1446,7 +1446,7 @@ const translations: Record<LangCode, Translation> = {
       tagline:
         "協議驅動的發行。\n建立在對數學的信任之上，而非承諾。",
       resources: "資源",
-      resourceLinks: ["白皮書", "GitHub", "審計報告", "文件"],
+      resourceLinks: ["文件", "GitHub", "審計報告", "文件"],
       community: "社群",
       communityLinks: ["Twitter / X", "Discord", "Telegram", "Medium"],
       copyright:
@@ -1472,7 +1472,7 @@ const translations: Record<LangCode, Translation> = {
       badge2: "自我生成",
       badge3: "可验证",
       cta1: "探索协议",
-      cta2: "阅读白皮书",
+      cta2: "阅读文档",
       scroll: "滚动",
     },
     philosophy: {
@@ -1488,10 +1488,10 @@ const translations: Record<LangCode, Translation> = {
       ],
       mintoriaWayTitle: "Mintoria 方式",
       mintoriaWay: [
-        "100% 社区铸造 — 零预分配",
+        "100% 社区铸造 , 零预分配",
         "透明的链上发行规则",
         "有储备支撑的数学驱动稀缺性",
-        "无需信任的协议 — 代码即保障",
+        "无需信任的协议 , 代码即保障",
       ],
     },
     mechanism: {
@@ -1510,13 +1510,13 @@ const translations: Record<LangCode, Translation> = {
           title: "经济控制",
           subtitle: "自我调节反馈",
           description:
-            "铸造成本随需求增加而上升，形成自然的价格发现机制。供应量通过算法调整 — 无需治理投票，无需人工干预。",
+            "铸造成本随需求增加而上升，形成自然的价格发现机制。供应量通过算法调整 , 无需治理投票，无需人工干预。",
         },
         {
           title: "链上结算",
           subtitle: "不可篡改的记录",
           description:
-            "每笔交易 — 铸造、销毁和储备分配 — 都在链上不可篡改地结算。完全可审计，零链下依赖。",
+            "每笔交易 , 铸造、销毁和储备分配 , 都在链上不可篡改地结算。完全可审计，零链下依赖。",
         },
       ],
     },
@@ -1549,7 +1549,7 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "内在价值",
           description:
-            "每个代币都需要真实资产才能铸造，形成自然的价格下限。没有免费代币，没有稀释 — 只有以价值支撑的发行。",
+            "每个代币都需要真实资产才能铸造，形成自然的价格下限。没有免费代币，没有稀释 , 只有以价值支撑的发行。",
         },
         {
           title: "可预测性",
@@ -1559,12 +1559,12 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "安全第一",
           description:
-            "不可变智能合约，无管理员密钥，无升级代理。协议无法被任何人修改、暂停或操控 — 包括其创建者。",
+            "不可变智能合约，无管理员密钥，无升级代理。协议无法被任何人修改、暂停或操控 , 包括其创建者。",
         },
         {
           title: "治理权力",
           description:
-            "代币持有者获得按比例分配的治理权。通过链上投票塑造协议的未来 — 真正的去中心化决策。",
+            "代币持有者获得按比例分配的治理权。通过链上投票塑造协议的未来 , 真正的去中心化决策。",
         },
       ],
     },
@@ -1583,7 +1583,7 @@ const translations: Record<LangCode, Translation> = {
       tagline:
         "协议驱动的发行。\n建立在对数学的信任之上，而非承诺。",
       resources: "资源",
-      resourceLinks: ["白皮书", "GitHub", "审计报告", "文档"],
+      resourceLinks: ["文档", "GitHub", "审计报告", "文档"],
       community: "社区",
       communityLinks: ["Twitter / X", "Discord", "Telegram", "Medium"],
       copyright:
@@ -1609,7 +1609,7 @@ const translations: Record<LangCode, Translation> = {
       badge2: "Αυτο-Δημιουργούμενο",
       badge3: "Επαληθεύσιμο",
       cta1: "Εξερεύνηση Πρωτοκόλλου",
-      cta2: "Ανάγνωση Whitepaper",
+      cta2: "Ανάγνωση τεκμηρίωσης",
       scroll: "Κύλιση",
     },
     philosophy: {
@@ -1625,10 +1625,10 @@ const translations: Record<LangCode, Translation> = {
       ],
       mintoriaWayTitle: "Ο Τρόπος Mintoria",
       mintoriaWay: [
-        "100% κοπή κοινότητας — μηδενική προ-κατανομή",
+        "100% κοπή κοινότητας , μηδενική προ-κατανομή",
         "Διαφανείς κανόνες έκδοσης on-chain",
         "Μαθηματική σπανιότητα με αποθεματικό υπόβαθρο",
-        "Πρωτόκολλο χωρίς εμπιστοσύνη — ο κώδικας είναι η εγγύηση",
+        "Πρωτόκολλο χωρίς εμπιστοσύνη , ο κώδικας είναι η εγγύηση",
       ],
     },
     mechanism: {
@@ -1647,13 +1647,13 @@ const translations: Record<LangCode, Translation> = {
           title: "Οικονομικός Έλεγχος",
           subtitle: "Αυτο-Ρυθμιζόμενη Ανατροφοδότηση",
           description:
-            "Το κόστος κοπής αυξάνεται με τη ζήτηση, δημιουργώντας φυσική ανακάλυψη τιμής. Η προσφορά ρυθμίζεται αλγοριθμικά — χωρίς ψηφοφορίες διακυβέρνησης, χωρίς χειροκίνητη παρέμβαση.",
+            "Το κόστος κοπής αυξάνεται με τη ζήτηση, δημιουργώντας φυσική ανακάλυψη τιμής. Η προσφορά ρυθμίζεται αλγοριθμικά , χωρίς ψηφοφορίες διακυβέρνησης, χωρίς χειροκίνητη παρέμβαση.",
         },
         {
           title: "On-Chain Διακανονισμός",
           subtitle: "Αμετάβλητο Αρχείο",
           description:
-            "Κάθε συναλλαγή — κοπή, κάψιμο και κατανομή αποθεματικού — διακανονίζεται αμετάβλητα on-chain. Πλήρης δυνατότητα ελέγχου, μηδενικές εξαρτήσεις off-chain.",
+            "Κάθε συναλλαγή , κοπή, κάψιμο και κατανομή αποθεματικού , διακανονίζεται αμετάβλητα on-chain. Πλήρης δυνατότητα ελέγχου, μηδενικές εξαρτήσεις off-chain.",
         },
       ],
     },
@@ -1686,7 +1686,7 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "Εγγενής Αξία",
           description:
-            "Κάθε token κοστίζει πραγματικά περιουσιακά στοιχεία για κοπή, δημιουργώντας φυσικό κατώτατο όριο τιμής. Χωρίς δωρεάν tokens, χωρίς αραίωση — μόνο έκδοση βάσει αξίας.",
+            "Κάθε token κοστίζει πραγματικά περιουσιακά στοιχεία για κοπή, δημιουργώντας φυσικό κατώτατο όριο τιμής. Χωρίς δωρεάν tokens, χωρίς αραίωση , μόνο έκδοση βάσει αξίας.",
         },
         {
           title: "Προβλεψιμότητα",
@@ -1696,12 +1696,12 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "Η Ασφάλεια Πρώτα",
           description:
-            "Αμετάβλητα έξυπνα συμβόλαια, χωρίς κλειδιά διαχειριστή, χωρίς διαμεσολαβητές αναβάθμισης. Το πρωτόκολλο δεν μπορεί να αλλαχθεί, να παυθεί ή να χειραγωγηθεί από κανέναν — ούτε από τους δημιουργούς του.",
+            "Αμετάβλητα έξυπνα συμβόλαια, χωρίς κλειδιά διαχειριστή, χωρίς διαμεσολαβητές αναβάθμισης. Το πρωτόκολλο δεν μπορεί να αλλαχθεί, να παυθεί ή να χειραγωγηθεί από κανέναν , ούτε από τους δημιουργούς του.",
         },
         {
           title: "Δύναμη Διακυβέρνησης",
           description:
-            "Οι κάτοχοι token αποκτούν αναλογικά δικαιώματα διακυβέρνησης. Διαμορφώστε το μέλλον του πρωτοκόλλου μέσω on-chain ψηφοφορίας — αληθινή αποκεντρωμένη λήψη αποφάσεων.",
+            "Οι κάτοχοι token αποκτούν αναλογικά δικαιώματα διακυβέρνησης. Διαμορφώστε το μέλλον του πρωτοκόλλου μέσω on-chain ψηφοφορίας , αληθινή αποκεντρωμένη λήψη αποφάσεων.",
         },
       ],
     },
@@ -1720,7 +1720,7 @@ const translations: Record<LangCode, Translation> = {
       tagline:
         "Έκδοση Καθοδηγούμενη από Πρωτόκολλο.\nΧτισμένο στην εμπιστοσύνη στα μαθηματικά, όχι σε υποσχέσεις.",
       resources: "Πόροι",
-      resourceLinks: ["Whitepaper", "GitHub", "Εκθέσεις Ελέγχου", "Τεκμηρίωση"],
+      resourceLinks: ["Έγγραφα", "GitHub", "Εκθέσεις Ελέγχου", "Τεκμηρίωση"],
       community: "Κοινότητα",
       communityLinks: ["Twitter / X", "Discord", "Telegram", "Medium"],
       copyright:
@@ -1746,7 +1746,7 @@ const translations: Record<LangCode, Translation> = {
       badge2: "สร้างตนเอง",
       badge3: "ตรวจสอบได้",
       cta1: "สำรวจโปรโตคอล",
-      cta2: "อ่าน Whitepaper",
+      cta2: "อ่านเอกสาร",
       scroll: "เลื่อน",
     },
     philosophy: {
@@ -1762,10 +1762,10 @@ const translations: Record<LangCode, Translation> = {
       ],
       mintoriaWayTitle: "วิธีของ Mintoria",
       mintoriaWay: [
-        "100% มินต์โดยชุมชน — ไม่มีการจัดสรรล่วงหน้า",
+        "100% มินต์โดยชุมชน , ไม่มีการจัดสรรล่วงหน้า",
         "กฎการออกโทเคนบนเชนที่โปร่งใส",
         "ความขาดแคลนที่ขับเคลื่อนด้วยคณิตศาสตร์พร้อมทุนสำรอง",
-        "โปรโตคอลที่ไม่ต้องอาศัยความไว้วางใจ — โค้ดคือหลักประกัน",
+        "โปรโตคอลที่ไม่ต้องอาศัยความไว้วางใจ , โค้ดคือหลักประกัน",
       ],
     },
     mechanism: {
@@ -1784,13 +1784,13 @@ const translations: Record<LangCode, Translation> = {
           title: "การควบคุมทางเศรษฐกิจ",
           subtitle: "ข้อเสนอแนะที่ปรับตนเอง",
           description:
-            "ต้นทุนการมินต์เพิ่มขึ้นตามอุปสงค์ สร้างการค้นพบราคาตามธรรมชาติ อุปทานปรับตามอัลกอริทึม — ไม่มีการลงคะแนนเสียงกำกับดูแล ไม่มีการแทรกแซงด้วยตนเอง",
+            "ต้นทุนการมินต์เพิ่มขึ้นตามอุปสงค์ สร้างการค้นพบราคาตามธรรมชาติ อุปทานปรับตามอัลกอริทึม , ไม่มีการลงคะแนนเสียงกำกับดูแล ไม่มีการแทรกแซงด้วยตนเอง",
         },
         {
           title: "การชำระบัญชีบนเชน",
           subtitle: "บันทึกที่ไม่เปลี่ยนแปลง",
           description:
-            "ทุกธุรกรรม — การมินต์ การเบิร์น และการจัดสรรทุนสำรอง — ได้รับการชำระบัญชีอย่างไม่เปลี่ยนแปลงบนเชน ตรวจสอบได้ทั้งหมด ไม่พึ่งพาสิ่งนอกเชน",
+            "ทุกธุรกรรม , การมินต์ การเบิร์น และการจัดสรรทุนสำรอง , ได้รับการชำระบัญชีอย่างไม่เปลี่ยนแปลงบนเชน ตรวจสอบได้ทั้งหมด ไม่พึ่งพาสิ่งนอกเชน",
         },
       ],
     },
@@ -1823,7 +1823,7 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "มูลค่าที่แท้จริง",
           description:
-            "ทุกโทเคนต้องใช้สินทรัพย์จริงในการมินต์ สร้างระดับราคาขั้นต่ำตามธรรมชาติ ไม่มีโทเคนฟรี ไม่มีการเจือจาง — มีแต่การออกโทเคนที่มีมูลค่าค้ำประกัน",
+            "ทุกโทเคนต้องใช้สินทรัพย์จริงในการมินต์ สร้างระดับราคาขั้นต่ำตามธรรมชาติ ไม่มีโทเคนฟรี ไม่มีการเจือจาง , มีแต่การออกโทเคนที่มีมูลค่าค้ำประกัน",
         },
         {
           title: "ความสามารถในการคาดการณ์",
@@ -1833,12 +1833,12 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "ความปลอดภัยก่อน",
           description:
-            "สมาร์ทคอนแทรคที่ไม่เปลี่ยนแปลง ไม่มีคีย์แอดมิน ไม่มีพร็อกซีอัปเกรด โปรโตคอลไม่สามารถถูกเปลี่ยนแปลง หยุดชั่วคราว หรือปรับแต่งโดยใครก็ตาม — รวมถึงผู้สร้าง",
+            "สมาร์ทคอนแทรคที่ไม่เปลี่ยนแปลง ไม่มีคีย์แอดมิน ไม่มีพร็อกซีอัปเกรด โปรโตคอลไม่สามารถถูกเปลี่ยนแปลง หยุดชั่วคราว หรือปรับแต่งโดยใครก็ตาม , รวมถึงผู้สร้าง",
         },
         {
           title: "อำนาจการกำกับดูแล",
           description:
-            "ผู้ถือโทเคนได้รับสิทธิ์การกำกับดูแลตามสัดส่วน กำหนดทิศทางอนาคตของโปรโตคอลผ่านการลงคะแนนบนเชน — การตัดสินใจแบบกระจายอำนาจอย่างแท้จริง",
+            "ผู้ถือโทเคนได้รับสิทธิ์การกำกับดูแลตามสัดส่วน กำหนดทิศทางอนาคตของโปรโตคอลผ่านการลงคะแนนบนเชน , การตัดสินใจแบบกระจายอำนาจอย่างแท้จริง",
         },
       ],
     },
@@ -1857,7 +1857,7 @@ const translations: Record<LangCode, Translation> = {
       tagline:
         "การออกโทเคนที่ขับเคลื่อนด้วยโปรโตคอล\nสร้างบนความไว้วางใจในคณิตศาสตร์ ไม่ใช่สัญญา",
       resources: "ทรัพยากร",
-      resourceLinks: ["Whitepaper", "GitHub", "รายงานการตรวจสอบ", "เอกสาร"],
+      resourceLinks: ["เอกสาร", "GitHub", "รายงานการตรวจสอบ", "เอกสาร"],
       community: "ชุมชน",
       communityLinks: ["Twitter / X", "Discord", "Telegram", "Medium"],
       copyright:
@@ -1879,11 +1879,11 @@ const translations: Record<LangCode, Translation> = {
       subtitle: "Нативный Протокол Чеканки",
       description:
         "Каждый токен чеканится сообществом, обеспечен математикой и рассчитывается on-chain.",
-      badge1: "Код — это Закон",
+      badge1: "Код , это Закон",
       badge2: "Самогенерируемый",
       badge3: "Верифицируемый",
       cta1: "Исследовать Протокол",
-      cta2: "Читать Whitepaper",
+      cta2: "Читать документацию",
       scroll: "Прокрутить",
     },
     philosophy: {
@@ -1899,10 +1899,10 @@ const translations: Record<LangCode, Translation> = {
       ],
       mintoriaWayTitle: "Способ Mintoria",
       mintoriaWay: [
-        "100% чеканка сообществом — ноль предварительного распределения",
+        "100% чеканка сообществом , ноль предварительного распределения",
         "Прозрачные правила эмиссии on-chain",
         "Математическая дефицитность с резервным обеспечением",
-        "Протокол без доверия — код является гарантией",
+        "Протокол без доверия , код является гарантией",
       ],
     },
     mechanism: {
@@ -1921,13 +1921,13 @@ const translations: Record<LangCode, Translation> = {
           title: "Экономический Контроль",
           subtitle: "Саморегулирующаяся Обратная Связь",
           description:
-            "Стоимость чеканки увеличивается со спросом, создавая естественное ценообразование. Предложение регулируется алгоритмически — без голосований по управлению, без ручного вмешательства.",
+            "Стоимость чеканки увеличивается со спросом, создавая естественное ценообразование. Предложение регулируется алгоритмически , без голосований по управлению, без ручного вмешательства.",
         },
         {
           title: "On-Chain Расчёт",
           subtitle: "Неизменяемый Реестр",
           description:
-            "Каждая транзакция — чеканка, сжигание и распределение резерва — рассчитывается неизменяемо on-chain. Полная проверяемость, ноль зависимостей off-chain.",
+            "Каждая транзакция , чеканка, сжигание и распределение резерва , рассчитывается неизменяемо on-chain. Полная проверяемость, ноль зависимостей off-chain.",
         },
       ],
     },
@@ -1960,7 +1960,7 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "Внутренняя Ценность",
           description:
-            "Каждый токен требует реальных активов для чеканки, создавая естественный ценовой пол. Никаких бесплатных токенов, никакого разводнения — только эмиссия, обеспеченная ценностью.",
+            "Каждый токен требует реальных активов для чеканки, создавая естественный ценовой пол. Никаких бесплатных токенов, никакого разводнения , только эмиссия, обеспеченная ценностью.",
         },
         {
           title: "Предсказуемость",
@@ -1970,12 +1970,12 @@ const translations: Record<LangCode, Translation> = {
         {
           title: "Безопасность Прежде Всего",
           description:
-            "Неизменяемые смарт-контракты, нет административных ключей, нет прокси-серверов обновления. Протокол не может быть изменён, приостановлен или манипулирован никем — включая его создателей.",
+            "Неизменяемые смарт-контракты, нет административных ключей, нет прокси-серверов обновления. Протокол не может быть изменён, приостановлен или манипулирован никем , включая его создателей.",
         },
         {
           title: "Власть Управления",
           description:
-            "Держатели токенов получают пропорциональные права управления. Формируйте будущее протокола через on-chain голосование — истинное децентрализованное принятие решений.",
+            "Держатели токенов получают пропорциональные права управления. Формируйте будущее протокола через on-chain голосование , истинное децентрализованное принятие решений.",
         },
       ],
     },
@@ -1994,7 +1994,7 @@ const translations: Record<LangCode, Translation> = {
       tagline:
         "Эмиссия, Управляемая Протоколом.\nПостроена на доверии к математике, а не обещаниям.",
       resources: "Ресурсы",
-      resourceLinks: ["Whitepaper", "GitHub", "Отчёты об Аудите", "Документация"],
+      resourceLinks: ["Документы", "GitHub", "Отчёты об Аудите", "Документация"],
       community: "Сообщество",
       communityLinks: ["Twitter / X", "Discord", "Telegram", "Medium"],
       copyright:

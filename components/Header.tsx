@@ -192,7 +192,7 @@ export default function Header() {
 
           {/* Right side: Language + CTA + Hamburger */}
           <div className="flex items-center gap-3">
-            {/* Language selector — desktop */}
+            {/* Language selector , desktop */}
             <div className="hidden md:block">
               <LanguageSelector />
             </div>
@@ -251,7 +251,7 @@ export default function Header() {
                 </a>
               ))}
 
-              {/* Language selector — mobile */}
+              {/* Language selector , mobile */}
               <div className="pt-2 pb-1 border-t border-white/5">
                 <LanguageSelector onSelect={() => setMobileOpen(false)} />
               </div>

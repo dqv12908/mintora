@@ -32,7 +32,7 @@ function HeroIllustration() {
         className="absolute inset-0 flex items-center justify-center"
         style={{ transformStyle: "preserve-3d" }}
       >
-        {/* ---- Orbit A — largest, cyan ---- */}
+        {/* ---- Orbit A , largest, cyan ---- */}
         <motion.div
           className="absolute w-48 h-48 sm:w-72 sm:h-72 md:w-[22rem] md:h-[22rem] lg:w-[26rem] lg:h-[26rem]"
           style={{ rotateX: 72, transformStyle: "preserve-3d" }}
@@ -55,7 +55,7 @@ function HeroIllustration() {
           </svg>
         </motion.div>
 
-        {/* ---- Orbit B — medium, purple ---- */}
+        {/* ---- Orbit B , medium, purple ---- */}
         <motion.div
           className="absolute w-40 h-40 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-[21rem] lg:h-[21rem]"
           style={{ rotateX: 72, rotateY: 55, transformStyle: "preserve-3d" }}
@@ -77,7 +77,7 @@ function HeroIllustration() {
           </svg>
         </motion.div>
 
-        {/* ---- Orbit C — smallest, green ---- */}
+        {/* ---- Orbit C , smallest, green ---- */}
         <motion.div
           className="absolute w-28 h-28 sm:w-44 sm:h-44 md:w-52 md:h-52 lg:w-64 lg:h-64"
           style={{ rotateX: 72, rotateY: -55, transformStyle: "preserve-3d" }}
@@ -98,7 +98,7 @@ function HeroIllustration() {
           </svg>
         </motion.div>
 
-        {/* ---- Central Core — rotating hexagonal wireframe ---- */}
+        {/* ---- Central Core , rotating hexagonal wireframe ---- */}
         <motion.div
           className="absolute w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32"
           style={{ rotateX: 20, transformStyle: "preserve-3d" }}
@@ -244,7 +244,7 @@ export default function HeroSection() {
               {t.hero.tag}
             </motion.div>
 
-            {/* Headline — Character-by-character reveal */}
+            {/* Headline , Character-by-character reveal */}
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-heading font-bold uppercase leading-tight mb-2">
               <span className="inline-block">
                 {titleChars.map((char, i) => (
@@ -342,7 +342,9 @@ export default function HeroSection() {
                 {t.hero.cta1}
               </a>
               <a
-                href="#"
+                href="https://mintoria.gitbook.io/mintoria-docs/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-neon-cyan border border-neon-cyan/50 hover:bg-neon-cyan/10 transition-all duration-300"
               >
                 {t.hero.cta2}

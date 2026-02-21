@@ -29,10 +29,12 @@ export default function Footer() {
               {t.footer.resources}
             </h4>
             <ul className="space-y-2">
-              {t.footer.resourceLinks.map((link) => (
+              {t.footer.resourceLinks.map((link, index) => (
                 <li key={link}>
                   <a
-                    href="#"
+                    href={index === 0 ? "https://mintoria.gitbook.io/mintoria-docs/" : "#"}
+                    target={index === 0 ? "_blank" : undefined}
+                    rel={index === 0 ? "noopener noreferrer" : undefined}
                     className="text-sm text-slate-500 hover:text-neon-cyan transition-colors"
                   >
                     {link}

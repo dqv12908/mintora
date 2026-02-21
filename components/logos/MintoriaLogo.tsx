@@ -1,7 +1,7 @@
 /**
  * Mintoria Logo System
  *
- * Abstract geometric prism mark — three facets creating an isometric
+ * Abstract geometric prism mark , three facets creating an isometric
  * crystal illusion. Suggests value crystallisation and protocol structure
  * without any literal letters, coins or currency symbols.
  *
@@ -9,7 +9,7 @@
  */
 
 /* ------------------------------------------------------------------ */
-/*  LOGOMARK — abstract prism                                          */
+/*  LOGOMARK , abstract prism                                          */
 /* ------------------------------------------------------------------ */
 
 export function Logomark({
@@ -108,7 +108,7 @@ export function Logomark({
 }
 
 /* ------------------------------------------------------------------ */
-/*  WORDMARK — "MINTORIA" text                                        */
+/*  WORDMARK , "MINTORIA" text                                        */
 /* ------------------------------------------------------------------ */
 
 export function Wordmark({
@@ -162,7 +162,7 @@ export function Wordmark({
 }
 
 /* ------------------------------------------------------------------ */
-/*  HORIZONTAL LOCKUP — logomark + wordmark side by side              */
+/*  HORIZONTAL LOCKUP , logomark + wordmark side by side              */
 /* ------------------------------------------------------------------ */
 
 export function LogoHorizontal({
@@ -187,7 +187,7 @@ export function LogoHorizontal({
 }
 
 /* ------------------------------------------------------------------ */
-/*  STACKED LOCKUP — logomark above wordmark, centred                 */
+/*  STACKED LOCKUP , logomark above wordmark, centred                 */
 /* ------------------------------------------------------------------ */
 
 export function LogoStacked({
