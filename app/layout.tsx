@@ -15,7 +15,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Mintoria — The Native Minting Protocol",
+  title: "Mintoria - The Native Minting Protocol",
   description:
     "Protocol-driven issuance. 100% community minted. Math-driven scarcity with on-chain settlement.",
   keywords: ["Mintoria", "DeFi", "minting", "protocol", "crypto", "blockchain"],
