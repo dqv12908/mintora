@@ -95,7 +95,7 @@ export default function DataDashboard() {
   const { t } = useLanguage();
 
   const stats = [
-    { label: t.dashboard.mintCostLabel, value: 0, sub: t.dashboard.awaitingGenesis, decimals: 0, displayOverride: "---" },
+    { label: t.dashboard.mintCostLabel, value: 0.0024, sub: "ETH", decimals: 4 },
     { label: t.dashboard.totalSupplyLabel, value: 8472931.42, sub: "MTR", decimals: 2 },
     { label: t.dashboard.totalBurnedLabel, value: 1245820.67, sub: "MTR", decimals: 2 },
     { label: t.dashboard.reservePoolLabel, value: 423.18, sub: "ETH", decimals: 2 },
