@@ -336,7 +336,9 @@ export default function HeroSection() {
               className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4"
             >
               <a
-                href="#philosophy"
+                href="https://www.gryvant.com/app.html"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-bg-primary bg-neon-cyan hover:bg-neon-cyan/90 glow-cyan transition-all duration-300"
               >
                 {t.hero.cta1}
