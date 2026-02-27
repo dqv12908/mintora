@@ -94,7 +94,7 @@ export default function DataDashboard() {
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
   const { t } = useLanguage();
 
-  const stats = [
+  const stats: { label: string; value: number; sub: string; decimals: number; displayOverride?: string }[] = [
     { label: t.dashboard.mintCostLabel, value: 0.0024, sub: "ETH", decimals: 4 },
     { label: t.dashboard.totalSupplyLabel, value: 8472931.42, sub: "MTR", decimals: 2 },
     { label: t.dashboard.totalBurnedLabel, value: 1245820.67, sub: "MTR", decimals: 2 },
